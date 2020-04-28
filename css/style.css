@@ -24,7 +24,6 @@ header ul{
     background:#35424a;
     color:#ffffff;
     border-bottom:#e84917 3px solid;
-    width:100%;
 }
 #myBtn {
   position: fixed; /* Fixed/sticky position */
@@ -44,22 +43,6 @@ header ul{
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
-.button_1{
-    height:38px;
-    background:#e8491d;
-    border:0;
-    padding-left:20px;
-    padding-right:20px;
-    color:#ffffff;
-}
-
-.dark{
-    padding:15px;
-    background:#35424a;
-    color:#ffffff;
-    margin-top:10px;
-    margin-bottom:10px;
-}
 
 /*Header*/
 header{
@@ -68,9 +51,10 @@ header{
     padding-top:10px;
     min-height:50px;
     border-bottom:#e84917 3px solid;
-    width:1264px;
+    width:100%;
+    right:0;
     position:fixed;
-    z-index: 500;
+    z-index: 1000;
  }
 
 
@@ -79,7 +63,6 @@ header a{
     text-decoration:none;
     text-transform:uppercase;
     font-size:16px;
-
 }
 
 header li{
@@ -104,6 +87,17 @@ header .highlight, header .current a{
 header a:hover{
      color: #cccccc;
      font-weight:bold;
+}
+#check .work{
+    float:right;
+    width 25%;
+    text-align:center;
+}
+
+#check h5{
+    padding:-50px;
+    float:center;
+    text-align:center;
 }
 
 /*Showcase*/
@@ -131,7 +125,6 @@ header a:hover{
 /*about*/
 
 #about{
-
     float:center;
     overflow:hidden;
 }
@@ -151,7 +144,8 @@ header a:hover{
 /*Boxes*/
 
 #skills{
-    margin-top:20px;
+    float:center;
+    overflow:hidden;
 }
 
 #skill h1{
