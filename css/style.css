@@ -20,11 +20,15 @@ header ul{
     padding:0;
 }
 .gap{
-    min-height:60px;
+    height:50px;
     background:#35424a;
     color:#ffffff;
     border-bottom:#e84917 3px solid;
 }
+.trial{
+    width:100%;
+}
+
 #myBtn {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
@@ -48,11 +52,8 @@ header ul{
 header{
     background:#35424a;
     color:#ffffff;
-    padding-top:10px;
-    min-height:50px;
     border-bottom:#e84917 3px solid;
     width:100%;
-    right:0;
     position:fixed;
     z-index: 1000;
  }
@@ -75,7 +76,6 @@ header nav{
     float:center;
     margin-top:10px;
     text-align:center;
-    background-attachment: scroll;
 }
 
 /*
@@ -163,10 +163,6 @@ header a:hover{
 /*Work Experience*/
 
 
-
-
-
-
 footer {
     padding:20px;
     margin-top:20px;
@@ -175,6 +171,16 @@ footer {
     text-align:center;
 }
 
+/*media*/
 
+@media(max-width: 798px){
+    header nav,
+    header nav li,
+    #skill .box{
+    float:none;
+    text-align:center
+    width:100%
+    }
+}
 
 
