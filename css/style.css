@@ -109,12 +109,13 @@ header a:hover{
 #showcase{
     min-height:590px;
     background:url('../img/me.jpg');
-    background-position:  center center ;
+    background-position:  center;
     max-width:100%;
     margin:auto;
     text-align:center;
     color: #ffffff;
     overflow:hidden;
+    position:relative;
 }
 
 #showcase h3{
@@ -124,6 +125,14 @@ header a:hover{
     float:left;
     overflow:hidden;
     margin-top:100px;
+}
+
+#showcase h4{
+  padding:0;
+  position:absolute;
+  bottom:0;
+  right:0;
+  font-size:5px;
 }
 
 /*about*/
@@ -166,6 +175,14 @@ header a:hover{
 
 
 /*Work Experience*/
+
+img.resize{
+    max-width:10%;
+    max-height:10%;
+}
+.working h2{
+    font-size:15px;
+}
 
 footer {
     padding:20px;
