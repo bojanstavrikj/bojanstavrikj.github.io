@@ -137,19 +137,16 @@ header a:hover{
 
 /*about*/
 
-#about{
-    float:center;
-    overflow:hidden;
-}
-#about h1{
+.check h1{
     text-align:center;
     color:#e8491d;
     overflow:hidden;
 }
-#about .par{
+.par{
     float:center;
-    width:50%;
-    text-align:center;
+    width:100%;
+    text-align:justify;
+    text-justify:inner-word;
     padding:0px;
     overflow:hidden;
 }
@@ -163,7 +160,7 @@ header a:hover{
 
 #skill h1{
     text-align:center;
-    color:#52595A;
+    color:#e8491d;
 
 }
 #skill .box{
@@ -177,18 +174,28 @@ header a:hover{
 /*Work Experience*/
 
 .working{
-    float:center;
+    float:left;
     text-align:center;
+    width:48%;
+    padding:10px;
 }
 
-
 img.resize{
-    max-width:10%;
-    max-height:10%;
+    max-width:15%;
+    max-height:15%;
     display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img.resize1{
+    max-width:8%;
+    max-height:8%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .working h2{
@@ -196,10 +203,32 @@ img.resize{
 }
 #professional h1{
     text-align:center;
+    color:#e8491d;
+}
+.working p{
+    text-align:justify;
+    text-justify:inner-word;
+
 }
 
 
+/*Education*/
+.school{
+    float:center;
+    text-align:center;
+    border-style: solid;
+    border-color:#e8491d;
+}
+.school h2{
+    font-size:15px;
+}
 
+.school h4{
+    font-size:20px;
+}
+#education h1{
+    text-align:center;
+    color:#e8491d;
 
 
 /*Footer*/
@@ -207,8 +236,9 @@ img.resize{
 footer {
     padding:20px;
     margin-top:20px;
-    color:white;
-    background-color:#e8491d;
+    background:#35424a;
+    color:#ffffff;
+    border-bottom:#e84917 3px solid;
     text-align:center;
 }
 
