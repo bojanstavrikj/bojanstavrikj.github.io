@@ -166,22 +166,41 @@
     </section>
 
     <section id="education">
-      <div class="educ">
-        <h1>Education</h1>
+      <h1>Education</h1>
+      <div id="educ">
         <div class="school">
+          <img class="resize1" src="./img/Nova.png">
           <h3>NOVA Information Management School (IMS)</h3>
-          <img class="resize2" src="./img/Nova.png">
           <h4>Masters in Data Science and Advanced Analytics</h4>
           <h2>09.2019 - 08.2021.</h2>
           <p>Major in Business Analytics</p>
+          <span class="fa-stack fa-2x" ><i class="fas fa-spinner fa-stack-2x"></i></span>
         </div>
+
+        <div id="space">
+        </div>
+
         <div class="school">
-          <h3>Erasmus University Rotterdam</h3>
           <img class="resize2" src="./img/Logo_EUR.png">
+          <h3>Erasmus University Rotterdam</h3>
           <h4>International Bachelor of Business and Business Economics</h4>
           <h2>09.2014 - 03.2018</h2>
           <p>Major in International Economics</p>
           <p>Thesis: Empirical analysis on “The Relationship Between Oil Price Fluctuations and Exchange Rates of Net Oil Exporters”</p>
+          <span class="fa-stack fa-2x" style="color:#4EEA2C"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-check-circle fa-stack-2x fa-inverse" style="color:#ffffff"></i></span>
+        </div>
+
+        <div id="space">
+        </div>
+
+         <div class="school">
+          <img class="resize2" src="./img/aisb.png">
+          <h3>American International School of Budapest (ASIB)</h3>
+          <h4>International Baccalaureate</h4>
+          <h2>09.2010 - 05.2014</h2>
+          <p>Major in International Economics</p>
+          <p>Thesis: Empirical analysis on “The Relationship Between Oil Price Fluctuations and Exchange Rates of Net Oil Exporters”</p>
+           <span class="fa-stack fa-2x" style="color:#4EEA2C"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-check-circle fa-stack-2x fa-inverse" style="color:#ffffff"></i></span>
         </div>
         </div>
     </section>
@@ -194,7 +213,7 @@
 
     <section id="check">
       <div class="container">
-        <h1>Working Experience</h1>
+        <h1>Projects</h1>
         <div class="work">
           <span class="fa-stack fa-3x" style="color:#F3A107"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-user-graduate fa-stack-1x fa-inverse"></i></span>
           <h3>Erasmus University Rotterdam</h3>
@@ -220,19 +239,45 @@
     </section>
 
     <section id="check">
-      <div class="container">
-        <h1>Working Experience</h1>
-        <div class="work">
-          <span class="fa-stack fa-3x" style="color:#F3A107"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-user-graduate fa-stack-1x fa-inverse"></i></span>
-          <h3>Erasmus University Rotterdam</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet ligula sit amet mauris congue, quis fringilla magna sagittis. Vestibulum ullamcorper finibus ante vel dignissim.</p>
-        </div>
-        </div>
+      <form name="sendMail" id="sendMailForm">
+            <div class="form-group user-name">
+                <label for="name" class="sr-only">Name</label>
+                <!-- "id" for taking name -->
+                <input type="text" class="form-control" required="" id="name" placeholder="First Name">
+            </div>
+            <div class="form-group user-email">
+                <label for="email" class="sr-only">Email</label>
+                <!-- "id" for taking email -->
+                <input type="email" class="form-control" required="" id="email" placeholder="Email Address">
+            </div>
+            <div class="form-group user-phone">
+                <label for="contactNumber" class="sr-only">Contact Number</label>
+                <!-- "id" for taking contact number -->
+                <input type="text" class="form-control" required="" id="contactNumber" placeholder="Phone">
+            </div>
+            <div class="form-group user-message">
+                <label for="message" class="sr-only">Message</label>
+                <!-- "id" for taking message -->
+                <textarea class="form-control" required="" id="message" placeholder="Write Message"></textarea>
+            </div>
+        <!-- Notifications for 'error' Or 'successfully'-->
+            <div class="col-md-12 mailResponse" style="display:none;">
+                <div class="alert alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <p class="mailResponseText"></p>
+                </div>
+            </div>
+        <!-- submit button -->
+        <button type="submit" class="btn btn-primary">Send Message <i class="fa fa-paper-plane"></i></button>
+      </form>
     </section>
 
     <footer>
       <p>Bojan Stavrikj 2020 &copy;</p>
     </footer>
+  <!-- Bootstrap core JS-->
   <script src="./top_button.js"></script>
+  <script src="./mail/java_email.js"></script>
+  <script src="./mail/java_email.php"></script>
   </body>
 </html>
