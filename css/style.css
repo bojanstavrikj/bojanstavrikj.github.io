@@ -212,11 +212,31 @@ img.resize1{
     color:#e8491d;
 }
 
-/*School*/
+.school h2{
+    font-size:15px;
+    color:#e8491d;
+}
 
+.school h3{
+    font-size:15px;
+}
+.school h4{
+    font-size:10px;
+}
+
+.school{
+    float:left;
+    border:1px solid black;
+    text-align:center;
+    padding:5px;
+    margin:5px;
+    border-style:solid;
+    border-radius:25px;
+    width:30%;
+}
 img.resize1{
-    max-width:5%;
-    max-height:5%;
+    max-width:10%;
+    max-height:10%;
 
 }
 img.resize2{
@@ -224,18 +244,10 @@ img.resize2{
     max-height:10%;
 }
 img.resize3{
-    max-width:10%;
-    max-height:10%;
+    max-width:30%;
+    max-height:20%;
 }
 
-#educ .school{
-    float:center;
-
-    text-align:center;
-    padding:0px;
-    margin:5px;
-    border-color:coral;
-}
 .space{
     min-height:50px;
 }
