@@ -30,9 +30,11 @@ hr {
     display:block
     }
 
+
 #professional h1{
     text-align:center;
     color:#e8491d;
+    top:20px;
 }
 
 #myBtn {
@@ -137,7 +139,7 @@ header a:hover{
 
 /*about*/
 
-.check h1{
+.about h1{
     text-align:center;
     color:#e8491d;
     overflow:hidden;
@@ -153,7 +155,7 @@ header a:hover{
 
 /*Boxes*/
 
-#skills{
+#skill{
     float:center;
     overflow:hidden;
 }
@@ -161,8 +163,8 @@ header a:hover{
 #skill h1{
     text-align:center;
     color:#e8491d;
-
 }
+
 #skill .box{
     float:left;
     width:25%;
