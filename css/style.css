@@ -30,6 +30,11 @@ hr {
     display:block
     }
 
+#professional h1{
+    text-align:center;
+    color:#e8491d;
+}
+
 #myBtn {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
@@ -98,11 +103,6 @@ header a:hover{
     text-align:center;
 }
 
-#check h5{
-    padding:-50px;
-    float:center;
-    text-align:center;
-}
 
 /*Showcase*/
 
@@ -178,7 +178,14 @@ header a:hover{
     text-align:center;
 
 }
+.working h2{
+    font-size:15px;
+}
 
+.working p{
+    text-align:justify;
+    text-justify:inner-word;
+}
 img.resize{
     max-width:15%;
     max-height:15%;
@@ -197,17 +204,7 @@ img.resize1{
     width: 50%;
 }
 
-.working h2{
-    font-size:15px;
-}
-#professional h1{
-    text-align:center;
-    color:#e8491d;
-}
-.working p{
-    text-align:justify;
-    text-justify:inner-word;
-}
+
 
 
 /*Education*/
