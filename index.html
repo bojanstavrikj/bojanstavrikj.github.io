@@ -15,11 +15,12 @@
   </head>
   <body>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="home" title="Go to top">Top</button>
 
     <header>
         <nav>
           <ul>
+            <li class="nav"><a class="nav-link js-scroll-trigger" href="#home"></a></li>
             <li class="nav"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
             <li class="nav"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
             <li class="nav"><a class="nav-link js-scroll-trigger" href="#work">Work Experience</a></li>
@@ -238,11 +239,10 @@
       <div class="formclass">
         <form id="contactform" action="https://formspree.io/moqkaror" method="POST">
           <h2>Contact me!</h2>
-          <p>Email</p>
-            <input type="email" name="_replyto">
+          <p>Name</p><textarea name="name"></textarea>
+          <p>Email</p><input type="email" name="_replyto">
           <p>Message</p>
-            <textarea name="body">
-            </textarea>
+            <textarea name="body"></textarea>
           <h1></h1>
           <input type="submit" value="Send">
         </form>
@@ -251,6 +251,11 @@
 
 
     <footer>
+      <div class="icons">
+        <a class="socialIcons" href="https://www.facebook.com/bojanstavrik" title="facebook"><i class="fab fa-facebook-square" style="color:0072DE"></i></a>
+        <a class="socialIcons" href="https://www.linkedin.com/in/bojan-stavrikj-062995b6/" title=";linkedin"><i class="fab fa-linkedin" style="color:0480F5"></i></a>
+        <a class="socialIcons" href="https://www.youtube.com/user/bojanmkd1/featured?view_as=subscriber" title="youtube"><i class="fab fa-youtube" style="color:EA0012"></i></a>
+      </div>
       <p>Bojan Stavrikj 2020 &copy;</p>
     </footer>
   <!-- Bootstrap core JS-->
