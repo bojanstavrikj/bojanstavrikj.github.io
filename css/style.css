@@ -322,6 +322,8 @@ footer {
     border-bottom:#e84917 3px solid;
     text-align:center;
 }
+
+.contact a, a:hover, a:active, a:visited { color: white; }
 .contact a{
     display:inline;
     font-size:10px;
