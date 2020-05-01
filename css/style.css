@@ -297,6 +297,13 @@ img.resize3{
   font-color:#e8491d;
 }
 
+#button{
+    background-color:#35424a;
+    color:white;
+    border-radius: 10%;
+    border-color:#e8491d;
+    height:20px;
+}
 
 #contactform h2{
     padding:20px;
