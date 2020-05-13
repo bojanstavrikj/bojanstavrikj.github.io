@@ -18,6 +18,7 @@ html {
 header ul{
     margin:0;
     padding:0;
+    text-align:center;
 }
 
 hr {
@@ -99,7 +100,6 @@ header a:hover{
     text-align:left;
     float:left;
     overflow:hidden;
-    margin-top:100px;
     margin-left:10px;
 }
 
@@ -201,14 +201,10 @@ img.resize1{
     overflow:hidden;
 }
 .school{
-    float:left;
-    border:1px solid black;
+    float:center;
     text-align:center;
     padding:5px;
     margin:5px;
-    border-style:solid;
-    border-radius:25px;
-    width:30%;
 }
 .school h2{
     font-size:15px;
@@ -238,6 +234,12 @@ img.resize3{
 
 .space{
     min-height:50px;
+}
+
+
+.projects p{
+    text-align:justify;
+    text-justify:inner-word;
 }
 
 #wait {
