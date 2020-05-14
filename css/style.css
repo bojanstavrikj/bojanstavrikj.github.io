@@ -14,7 +14,6 @@ html {
     margin:auto;
     overflow:hidden;
 }
-
 header ul{
     margin:0;
     padding:0;
@@ -56,11 +55,25 @@ header{
     padding:10px;
 }
 
+.top {
+    width:99%;
+    margin:auto;
+    overflow:hidden;
+    color:#7e9181;
+}
+
+.top p{
+    padding: 0;
+    margin:0;
+    text-align:left;
+}
+
 header a{
     color:#ffffff;
     text-decoration:none;
     text-transform:uppercase;
     font-size:16px;
+    bottom:0;
 }
 
 header li{
@@ -71,9 +84,13 @@ header li{
 
 header nav{
     float:center;
-    margin-top:10px;
     text-align:center;
 }
+
+header #name p{
+    font-size:20px;
+}
+
 
 header a:hover{
      color: #e84917;
@@ -208,7 +225,7 @@ img.resize1{
 }
 .school h2{
     font-size:15px;
-    color:#E1863F;
+    color:#7e9181;
 }
 
 .school h3{
@@ -254,6 +271,7 @@ img.resize3{
 }
 #wait h2{
     font-size:15px;
+    color:#7e9181;
 }
 
 
