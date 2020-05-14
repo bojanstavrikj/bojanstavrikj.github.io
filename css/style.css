@@ -14,6 +14,12 @@ html {
     margin:auto;
     overflow:hidden;
 }
+
+header .current a{
+    color:#e84917;
+    font-weight:bold;
+}
+
 header ul{
     margin:0;
     padding:0;
@@ -103,7 +109,6 @@ header a:hover{
     min-height:500px;
     background:url('../img/me.jpg');
     background-position: center;
-    max-width:100%;
     color: #ffffff;
     overflow:hidden;
     position:relative;
@@ -291,7 +296,36 @@ img.resize3{
   100% { transform: rotate(360deg); }
 }
 
+ul {
+    list-style-type: none;
+    padding:10px;
+}
 
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#services h1{
+    color:#e8491d;
+}
+
+.service{
+    background-color:#35424a;
+    border-radius:10px;
+    border: 2px solid #e84917;
+    padding:10px;
+    color:#ffffff;
+    text-align:justify;
+    text-justify:inner-word;
+}
+
+.service p{
+    font-size:10px;
+}
+
+.service h3{
+    color:#e84917;
+}
 
 /*Form*/
 .formclass{
