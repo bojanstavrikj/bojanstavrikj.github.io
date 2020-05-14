@@ -230,7 +230,7 @@ img.resize1{
 }
 .school h2{
     font-size:15px;
-    color:#7e9181;
+
 }
 
 .school h3{
@@ -265,7 +265,6 @@ img.resize3{
 }
 
 #wait {
-
     padding:20px;
     text-align:center;
     display:inline;
@@ -274,9 +273,9 @@ img.resize3{
 #wait h1{
     color:#e8491d;
 }
+
 #wait h2{
     font-size:15px;
-    color:#7e9181;
 }
 
 
