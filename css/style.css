@@ -302,16 +302,9 @@ li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-#services h1{
-    color:#e8491d;
-}
-
 .service{
-    background-color:#35424a;
     border-radius:10px;
-    border: 2px solid #e84917;
     padding:10px;
-    color:#ffffff;
     text-align:justify;
     text-justify:inner-word;
 }
