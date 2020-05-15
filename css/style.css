@@ -1,7 +1,7 @@
 body{
     font:15px/1.5 Arial, Helvetica;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #EAE7DC;
 }
 
 /*Global*/
@@ -16,7 +16,7 @@ html {
 }
 
 header .current a{
-    color:#e84917;
+    color:#8e8d8a;
     font-weight:bold;
 }
 
@@ -36,17 +36,17 @@ hr {
 
 #top {
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 10px; /* Place the button at the bottom of the page */
+  right: 5px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  border: 2px solid #e84917; /* Remove borders */
+  border: 2px solid #05386b; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #35424a; /* Set a background color */
+  background-color: #aaabb8; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  padding: 10px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  font-size: 10px; /* Increase font size */
 }
 
 #home:hover {
@@ -55,9 +55,7 @@ hr {
 
 /*Header*/
 header{
-    background:#35424a;
     color:#ffffff;
-    border-bottom:#e84917 3px solid;
     padding:10px;
 }
 
@@ -65,7 +63,7 @@ header{
     width:99%;
     margin:auto;
     overflow:hidden;
-    color:#7e9181;
+    color:#05386b;
 }
 
 .top p{
@@ -75,7 +73,7 @@ header{
 }
 
 header a{
-    color:#ffffff;
+    color:#05386b;
     text-decoration:none;
     text-transform:uppercase;
     font-size:16px;
@@ -99,7 +97,7 @@ header #name p{
 
 
 header a:hover{
-     color: #e84917;
+     color: #05386b;
      font-weight:bold;
 }
 
@@ -108,10 +106,10 @@ header a:hover{
 
 .me{
     border-radius: 50%;
-    height:50%;
-    width:50%;
+    height:40%;
+    width:40%;
     float:right;
-    padding:20px;
+    padding:5%;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
@@ -119,23 +117,25 @@ header a:hover{
 
 #showcase h1{
     font-size:20px;
-    padding-top:15%;
-    padding-left:20px;
+    padding-left:5%;
+    padding-top:5%;
     font-family:lalezar;
+    color:#05386b;
 }
 
 #showcase p{
     font-size:20px;
-    padding-left:20px;
+    padding-left:5%;
     font-family:monserat;
     width:40%;
+    color:#05386b;
 }
 
 /*about*/
 
 #about h1{
     text-align:center;
-    color:#e8491d;
+    color:#05386b;
     overflow:hidden;
 }
 .par{
@@ -145,6 +145,7 @@ header a:hover{
     text-justify:inner-word;
     padding:0px;
     overflow:hidden;
+    color:#edf5e1;
 }
 
 /*Boxes*/
@@ -156,7 +157,7 @@ header a:hover{
 
 #skill h1{
     text-align:center;
-    color:#e8491d;
+    color:#05386b;
 }
 
 #skill .box{
@@ -164,11 +165,12 @@ header a:hover{
     width:33%;
     text-align:center;
     padding:0px;
+    color:#edf5e1;
 }
 
 #lang h1{
     text-align:center;
-    color:#e8491d;
+    color:25274d;
 }
 
 #lang .box{
@@ -179,9 +181,8 @@ header a:hover{
 /*Work Experience*/
 #professional h1{
     text-align:center;
-    color:#e8491d;
-    top:20px;
-    padding:20px;
+    color:25274d;
+
 }
 .working{
     float:center;
