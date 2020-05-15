@@ -1,5 +1,5 @@
 body{
-    font:15px/1.5 Arial, Helvetica;
+    font:15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -105,30 +105,32 @@ header a:hover{
 
 /*Showcase*/
 
-
-.me{
-    border-radius: 50%;
-    height:50%;
-    width:50%;
-    float:right;
-    padding:20px;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+#showcase{
+    min-height:500px;
+    background:url('../img/me.jpg');
+    background-position: center;
+    color: #ffffff;
+    overflow:hidden;
+    position:relative;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-
-#showcase h1{
-    font-size:20px;
-    padding-top:15%;
-    padding-left:20px;
-    font-family:lalezar;
+#showcase h3{
+    font-size:30px;
+    font-family:fantasy;
+    text-align:left;
+    float:left;
+    overflow:hidden;
+    margin-left:10px;
 }
 
-#showcase p{
-    font-size:20px;
-    padding-left:20px;
-    font-family:monserat;
-    width:40%;
+#showcase h4{
+  padding:0;
+  position:absolute;
+  bottom:0;
+  right:0;
+  font-size:10px;
 }
 
 /*about*/
