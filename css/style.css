@@ -302,6 +302,10 @@ li:not(:last-child) {
     margin-bottom: 10px;
 }
 
+#services h1{
+    color:#e8491d;
+}
+
 .service{
     border-radius:10px;
     padding:10px;
