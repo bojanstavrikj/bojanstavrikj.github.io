@@ -31,25 +31,20 @@
   <button onclick="topFunction()" id="top" title="Go to top">Top</button>
 
     <header>
-      <div class="container">
-          <ul class="navbar">
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <!--<li class="nav"><a class="nav-link js-scroll-trigger" href="index.html">About</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#skill">Skills</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#lang">Languages</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#professional">Work</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-            <li class="nav"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>-->
-          </ul>
+      <div id="top-navigation">
+        <h1 class="current"><a href="index.html">Home</a></h1>
+        <h1><a href="services.html">Services</a></h1>
       </div>
     </header>
 
-    <section id="showcase">
+    <section>
+      <div id="imgme">
         <img class="me" src="./img/me.jpg">
+      </div>
+      <div id="nameme">
         <h1>Bojan Stavrikj</h1>
         <p>Data Scientist and Business Analyst</p>
+      </div>
     </section>
 
     <section id="about">
@@ -67,55 +62,29 @@
     <section id="skill">
         <h1>Skills</h1>
         <div class="box">
-          <span class="fa-stack fa-2x"style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-python fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x"style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-python fa-stack-1x fa-inverse"></i></span>
           <h3>Python</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i></span>
           <h3>Power BI</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-database fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-database fa-stack-1x fa-inverse"></i></span>
           <h3>My SQL</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-sitemap fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-sitemap fa-stack-1x fa-inverse"></i></span>
           <h3>Business Intelligence</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x"style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-search fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x"style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-search fa-stack-1x fa-inverse"></i></span>
           <h3>Web Scraping</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-file-excel fa-stack-1x fa-inverse"></i></span>
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-file-excel fa-stack-1x fa-inverse"></i></span>
           <h3>Machine Learning</h3>
         </div>
-    </section>
-
-    <section id="lang">
-      <div class="skilled">
-        <h1>Languages</h1>
-        <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-language fa-stack-1x fa-inverse" style="color:#ffffff"></i></span>
-          <h3>Macedonian</h3>
-            <p>Native</p>
-        </div>
-        <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-globe fa-stack-1x fa-inverse"></i></span>
-          <h3>English</h3>
-            <p>Fluent</p>
-        </div>
-        <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-globe-europe fa-stack-1x fa-inverse"></i></span>
-          <h3>Serbo-Croatian</h3>
-            <p>Fluent</p>
-        </div>
-        <div class="box">
-          <span class="fa-stack fa-2x" style="color:#499FBF"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-comments fa-stack-1x fa-inverse"></i></span>
-          <h3>Hungarian</h3>
-            <p>Advanced</p>
-        </div>
-      </div>
     </section>
 
     <section id="professional">
@@ -178,7 +147,33 @@
         </div>
       </div>
     </section>
-  
+
+    <section id="lang">
+      <div class="skilled">
+        <h1>Languages</h1>
+        <div class="box">
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-language fa-stack-1x fa-inverse" style="color:#ffffff"></i></span>
+          <h3>Macedonian</h3>
+            <p>Native</p>
+        </div>
+        <div class="box">
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-globe fa-stack-1x fa-inverse"></i></span>
+          <h3>English</h3>
+            <p>Fluent</p>
+        </div>
+        <div class="box">
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-globe-europe fa-stack-1x fa-inverse"></i></span>
+          <h3>Serbo-Croatian</h3>
+            <p>Fluent</p>
+        </div>
+        <div class="box">
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="far fa-comments fa-stack-1x fa-inverse"></i></span>
+          <h3>Hungarian</h3>
+            <p>Advanced</p>
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
       <div class="container">
         <div id="wait">
@@ -199,6 +194,7 @@
             <h2>Customer Segmentation - NOVA IMS</h2>
             <p>This project was developed in a team of 4. The data used is real and obtained from a hotel based in Lisboa, Portugal. At the time the hotel had implemented a customer segmentation which was based solely on the booking platform the customer used last. Our team obtained data on a large number of clients of this hotel and managed to perform in-depth analysis on the types of customers that book stays at the hotel in question. The end product resulted in 4 segments for the specific static dataset. Lastly our team gave detailed description of each cluster and suggestions on deployment, maintenance as well as marketing strategies for each profile of customers.</p>
           </div>
+        </div>
       </div>
     </section>
 <!--    <h2>More coming Soon!</h2>
