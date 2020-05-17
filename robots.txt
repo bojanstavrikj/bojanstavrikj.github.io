@@ -1,0 +1,4 @@
+Sitemap: https://bojanstavrikj.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
