@@ -85,7 +85,6 @@ hr {
     padding:20px;
 }
 
-
 #nameme h1{
     font-size:20px;
     padding-top:15%;
@@ -101,15 +100,11 @@ hr {
 }
 
 /*about*/
-#about{
-    margin-top:10%;
-}
-
-
 #about h1{
     text-align:center;
     color:#f28e02;
     overflow:hidden;
+    margin-top:10%;
 }
 .par{
     float:center;
@@ -141,30 +136,9 @@ hr {
     padding:0px;
     color:#1d3557;
     font-size:12px;
-    margin-top:10%;
+    margin-top:10px;
 }
 
-#lang{
-    margin-top:10%;
-}
-#lang h1{
-    text-align:center;
-    color:#f28e02;
-}
-.box h3{
-    margin-bottom:0;
-}
-.box p{
-    margin-top:0;
-}
-
-#lang .box{
-    float:left;
-    width:50%;
-    text-align:center;
-    color:#1d3557;
-    margin-top:10%;
-}
 /*Work Experience*/
 #professional{
     margin-top:10%;
@@ -175,10 +149,6 @@ hr {
     color:#f28e02;
     top:20px;
     padding:20px;
-}
-
-.circle{
-    margin-top:10%;
 }
 
 .working{
@@ -228,7 +198,7 @@ img.resize1{
     text-align:center;
     padding:5px;
     margin:5px;
-    margin-top:10%;
+    margin-top:20px;
 }
 .school h2,.school h3{
     font-size:15px;
@@ -255,14 +225,35 @@ img.resize3{
     max-height:20%;
 }
 
+/*Languages*/
+
+#lang{
+    margin-top:10%;
+}
+#lang h1{
+    text-align:center;
+    color:#f28e02;
+}
+.box h3{
+    margin-bottom:0;
+}
+.box p{
+    margin-top:0;
+}
+
+#lang .box{
+    float:left;
+    width:50%;
+    text-align:center;
+    color:#1d3557;
+
+}
+
 /*Projects*/
 #projects{
     margin-top:10%;
 }
 
-.projects{
-    padding-top:10%;
-}
 .projects p{
     text-align:justify;
     text-justify:inner-word;
