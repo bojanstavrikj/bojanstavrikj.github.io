@@ -57,9 +57,10 @@ hr {
 #top-navigation h1 {
     display:inline;
     list-style-type:none;
-    padding:0 20px 0 20px;
+    padding:0 10px 0 10px;
     font-size:16px;
     font-weight:normal;
+    text-transform: uppercase;
 }
 
 
@@ -360,7 +361,21 @@ img.resize3{
 
 .article h3 a{
     margin-top:40px;
+    color:#f28e02;
+    font-weight:normal;
+    text-transform: uppercase;
+    text-decoration:none;
+}
+.article p, .article p a{
+    color:#457b9d;
+}
+
+.article p a:hover{
     color:#1d3557;
+    font-weight:bold;
+}
+.article h3 a:hover{
+    font-weight:bold;
 }
 
 /*Article 1*/
