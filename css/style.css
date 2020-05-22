@@ -312,6 +312,9 @@ img.resize3{
     color:#1d3557;
     text-align:center;
 }
+.service p a{
+    color:#457b9d;
+}
 
 /*Form*/
 .formclass{
