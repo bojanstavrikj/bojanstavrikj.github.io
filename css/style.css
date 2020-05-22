@@ -16,7 +16,6 @@ html {
     overflow:hidden;
 }
 
-
 hr {
     width:100%;
     height:1px;
@@ -317,7 +316,7 @@ img.resize3{
 /*Form*/
 .formclass{
   background-color: #212529;
-  background-image: url("../img/map-image.jpeg 2000");
+  background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
   min-height:400px;
@@ -349,7 +348,57 @@ img.resize3{
   text-align:center;
   color:white;
 }
+/*Content Page*/
+.article{
+    margin-top:40px;
+    border:#1d3557 2px solid;
+    padding:20px;
+}
 
+.article h3 a{
+    margin-top:40px;
+    color:#1d3557;
+}
+
+/*Article 1*/
+.article1 h3{
+    margin-top:40px;
+    color:#1d3557;
+}
+
+.article1 p{
+    font-size:15px;
+    text-align:center;
+    text-align:justify;
+    text-justify:inner-word;
+    color:#457b9d;
+}
+
+.article1 p a{
+    font-size:15px;
+    text-align:center;
+    text-align:justify;
+    text-justify:inner-word;
+    color:#457b9d;
+}
+
+.article1 .resize4{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.article1 pre{
+    overflow: auto;
+    background-color: #eeeeee;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
+.article1 #download{
+    color:#457b9d;
+}
 
 /*Footer*/
 
