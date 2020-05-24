@@ -26,9 +26,41 @@
     </header>
 
     <section>
+
       <div class="container">
         <div class="article1">
             <h3>Web Scraping Wunderground</h3>
+             <div id="share-buttons">
+                <!-- Email -->
+                <a href="mailto:?&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bojanstavrikj.github.io/article1.html">
+                    <img src="./img/mail.png">
+                </a>
+
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://bojanstavrikj.github.io/article1.html" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://bojanstavrikj.github.io/article1.html" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+
+                <!-- Print -->
+                <a href="javascript:;" onclick="window.print()">
+                    <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+                </a>
+
+                <!-- Reddit -->
+                <a href="http://reddit.com/submit?url=https://bojanstavrikj.github.io/article1.html&amp;title=Web Scarping Wuderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://bojanstavrikj.github.io/article1.html&amp;hashtags=datascience,webscraping,wunderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+            </div>
             <p>Web scraping is the process of loading, fetching and extracting data from a website. Fetching refers to downloading of the contents, which also happens when you browse and open  pages on the internet. Once the page has been fetched, then we can process and extract data from it. The html content is parsed and can later be used to find the specific details of that page that we want to take out. This can ultimately be exported as a csv, excel if necessary, or it can directly be used for analysis. Web scraping sites can be tricky business, but it doesn't have to be as difficult as it sounds. It is a fun little task and there are several ways to do it. This article will present web scraping with python.</p>
             <p>Often people are interested in obtaining historical weather data in order to use it in their analysis or just have a record of it. One website that offers this is wunderground.com. The easiest way to obtain their historical weather data is using their API for which you need to pay. Another option (the option that I will show in this article) is to scrape it using several libraries in Python. Please note that the data that we will extract here is in Fahrenheit. In case you want to convert it to Celsius you can use the following formula: (1°F − 32) × 5/9 = -17.22°C.</p>
             <p></p>
@@ -158,6 +190,7 @@
             <p>To download a .py file click on the link below. In order to run it, you need to make sure you have all the libraries installed, and replace the chromedriver path with your own.</p>
             <a id="download" href="Wunderground_scraper_upload.py" target="_blank" download>Download File</a>
             <p>I hope this has helped you, please contact me below in case you have any questions or improvements.</p>
+
         </div>
       </div>
     </section>
