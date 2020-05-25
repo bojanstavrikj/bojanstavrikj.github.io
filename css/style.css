@@ -34,7 +34,7 @@ hr {
   background-color: #f1faee; /* Set a background color */
   color: #1d3557; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 8px; /* Some padding */
+  padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
   font-size: 12px; /* Increase font size */
 }
@@ -337,11 +337,14 @@ img.resize3{
     border-radius:10px;
 }
 #button{
-    background-color:#1d3557;
+    background-color:#457b9d;
     color:#f28e02;
     border-radius: 10%;
     border-color:#f28e02;
     text-align:center;
+    cursor:pointer;
+    width:60px;
+    height:25px;
 }
 
 /*Content Page*/
