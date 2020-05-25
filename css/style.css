@@ -326,7 +326,7 @@ img.resize3{
 .formclass{
     min-height:250px;
     text-align:center;
-    width:400px;
+    width:70%;
     margin:auto;
     overflow:hidden;
     background-color:#457b9d;
@@ -352,7 +352,6 @@ img.resize3{
 
 .right textarea{
     height:40%;
-    width:60%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
