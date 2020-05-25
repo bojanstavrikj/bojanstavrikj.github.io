@@ -321,19 +321,16 @@ img.resize3{
 #contactme{
     margin:auto;
     overflow:hidden;
+    min-height:270px;
 }
-
 .formclass{
-    height:40%;
-    width:60%;
+    min-height:250px;
     text-align:center;
+    width:400px;
     margin:auto;
     overflow:hidden;
     background-color:#457b9d;
     border-radius:2%;
-    padding-right:0;
-    padding-left:20px;
-    padding-bottom:30px;
 }
 
 .formclass h2, .formclass p{
@@ -354,8 +351,8 @@ img.resize3{
 }
 
 .right textarea{
-    height:45%;
-    width:70%;
+    height:40%;
+    width:60%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
