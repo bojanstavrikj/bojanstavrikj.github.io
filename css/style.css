@@ -328,9 +328,8 @@ img.resize3{
     text-align:center;
     width:70%;
     margin:auto;
-    overflow:hidden;
     background-color:#457b9d;
-    border-radius:2%;
+    padding-top:10px;
 }
 
 .formclass h2, .formclass p{
