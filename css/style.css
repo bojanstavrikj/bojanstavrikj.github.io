@@ -412,6 +412,28 @@ img.resize3{
     color:#457b9d;
 }
 
+/*Article2*/
+.article1 .resize5{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.article1 .resize6{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.article1 li, .article1 li a{
+    font-size:15px;
+    color:#457b9d;
+}
+
+.article1 li{
+    margin-left:30px;
+}
+
 /*Footer*/
 
 footer {

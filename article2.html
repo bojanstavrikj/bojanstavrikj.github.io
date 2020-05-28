@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tutorial article about web hosting sites free using Github pages. In this article I explain how web hosting works, and how you can get your website hosting service for free!!">
+    <meta name="keywords" content="Stavric, Stavrik, Stavrikj, Bojan Stavric, Bojan Svarik, web scraping, beautiful soup, beautifulsoup, selenium, chromedriver, python, web scraping python, what is web scraping, ">
+    <meta ta name="author" content="Bojan Stavrikj">
+    <title>Web Hosting Websites - Github Pages</title>
+    <link rel="icon"  href="./img/bold.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+
+    <header>
+      <div id="top-navigation">
+        <h1><a href="index.html">Home</a></h1>
+        <h1><a href="services.html">Services</a></h1>
+        <h1 class="current"><a href="content.html">Content</a></h1>
+      </div>
+    </header>
+
+    <section>
+
+      <div class="container">
+        <div class="article1">
+            <h3>How to host your HTML webpage for free?</h3>
+             <div id="share-buttons">
+                <!-- Email -->
+                <a href="mailto:?&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bojanstavrikj.github.io/article1.html">
+                    <img src="./img/mail.png">
+                </a>
+
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://bojanstavrikj.github.io/article1.html" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://bojanstavrikj.github.io/article1.html" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+
+                <!-- Print -->
+                <a href="javascript:;" onclick="window.print()">
+                    <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+                </a>
+
+                <!-- Reddit -->
+                <a href="http://reddit.com/submit?url=https://bojanstavrikj.github.io/article1.html&amp;title=Web Scarping Wuderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://bojanstavrikj.github.io/article1.html&amp;hashtags=datascience,webscraping,wunderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+            <p>The easiest way to spread your ideas is to put them up on the internet. In order to put your ideas on the internet you either need a user profile on an existing platform or better yet - creating your own.</p>
+            <p>A website is nothing more than files that are loaded (by you) and downloaded (by others) through the internet using a browser. One of the components of a website is the skeleton or html script where you structure your site, and input the content you want to display. While the second component of a website is the styling or css file, which makes sure your content looks good. Once you have the main components, it is time to make them go live.</p>
+            <p>In order to do this, we need to get familiarized with the term web hosting. Website hosting is what allows your website to go online. There are providers or servers where your files are kept and made available on the world wide web. Once your files are on a server for web hosting, all someone has to do is search your webpage's domain and they will be able to view its content on their browsers.</p>
+            <p>Most of the times you have to pay for hosting a webpage, depending on what provider you turn to. Although, there is one (at least that I know of) that offers web hosting free - Github Pages. I will only explain how to get your page online, if you want to learn more about Github Pages follow this <a href="https://pages.github.com/" target="_blank">link</a>.</p>
+            <p>The first step of the process is downloading the Github's desktop application. It is not necessary to do it through the desktop app, but it will make your life easier later on when you update your content locally and want to make it go live. To download the desktop version follow one of these links:</p>
+            <li>For <a href="https://central.github.com/deployments/desktop/desktop/latest/darwin" target="_blank">Mac</a></li>
+            <li>For <a href="https://central.github.com/deployments/desktop/desktop/latest/win32" target="_blank">Windows</a></li>
+            <p>Now that you are in Github, create a new repository and the following pop-up window will show up:</p>
+            <img class="resize5" src="./img/create_rep.png">
+            <p>In name put your_username.github.io. where you replace your_username with your own Github username. For my case, my username is bojanstavrikj, so the repository name is <a href="https://bojanstavrikj.github.io" target="_blank">bojanstavrikj.github.io</a>. It is very important to use this format as your repository name, otherwise it's not going to work. The Local Path option is where your repository will be cloned on your machine (it is advisable that it's easily accessible). Note, this is not the path where your files currently reside, but Github needs to create this empty folder as the new home for the files of the repository. Leave the rest of the fields to their default option and click Create Repository.</p>
+            <p>Now that your repository is created, all you need to do is move your html, css and other files (images, icons, javascript...) to the newly created repository (located where you set your local path in the previous step). Another very important note, your homepage html file needs to be named "index.html" !!!</p>
+            <p>Once you have moved the files to the repository's path your Github app should look something like this:</p>
+            <img class="resize6" src="./img/push.png">
+            <p>Under the changed files section you should have all your necessary files for your page to run. Double check that you can see all of them, write a summary in the summary box (this is required in order to commit them Github). And lastly click the button Commit to master in the bottom left of the app window.</p>
+            <p>It usually doesn't take too much time to make it go online. Wait for some 15-20 minutes and search your_username.github.io in your browser, your website should be there.</p>
+            <p>I hope this helped you. If you have any questions or suggestions, please don't hesitate to contact me below.</p>
+        </div>
+      </div>
+    </section>
+
+   <div class="contact">
+      <h2>Let's Get In Touch!</h2>
+      <form id="contactform" action="https://formspree.io/moqkaror" method="POST">
+        <div class="input">
+          <p>Name</p><input name="name">
+        </div>
+        <div class="input">
+          <p>Email</p><input type="email" name="_replyto">
+        </div>
+        <div class="input">
+          <p>Message</p>
+          <textarea name="body"></textarea>
+        </div>
+        <div class="input">
+          <input id="button" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="icons">
+        <a class="socialIcons" href="https://www.facebook.com/bojanstavrik" title="facebook"><i class="fab fa-facebook-square" style="color:0072DE"></i></a>
+        <a class="socialIcons" href="https://www.linkedin.com/in/bojan-stavrikj-062995b6/" title=";linkedin"><i class="fab fa-linkedin" style="color:0480F5"></i></a>
+        <a class="socialIcons" href="https://www.youtube.com/user/bojanmkd1/featured?view_as=subscriber" title="youtube"><i class="fab fa-youtube" style="color:EA0012"></i></a>
+      </div>
+     <!-- <div class="contact">
+        <a href="mailto:bojanstavrik@gmail.com">bojanstavrik@gmail.com</a>
+        <a href="tel:+351915654942">+351 915654942</a>
+      </div>-->
+      <p>Bojan Stavrikj 2020 &copy;</p>
+    </footer>
+
+  <!-- Bootstrap core JS-->
+  <script src="./top_button.js"></script>
+
+  </body>
+</html>
