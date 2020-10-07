@@ -1,6 +1,8 @@
-#Options +FollowSymLinks -MultiViews
-# Turn mod_rewrite on
-RewriteEngine On
-RewriteBase /
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
 
-RewriteRule ^content/pages/(.*)$ /$1 [L,NC,R]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ /index.html$1 [L]
+</IfModule>
