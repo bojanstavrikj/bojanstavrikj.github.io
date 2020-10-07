@@ -9,12 +9,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 # Check for file in directory with .html extension
 
-RewriteCond %{REQUEST_FILENAME}\.html -f
 
-
-# Here we actually show the page that has the .html extension
-
-RewriteRule ^(.*)\.html$ /$1 [L,R=301]
 
 RewriteRule ^(.*) content/articles/wunderground_scraper_original/wunderground_scraper=$1 [QSA,L]
 RewriteRule ^(.*) content/pages/content=$1 [QSA,L]
