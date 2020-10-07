@@ -1,7 +1,2 @@
-# mod_rewrite starts here
-
-RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)\.html$ /$1 [L,R=301]
+RewriteEngine On
+RewriteRule   bojanstavrikj.github.io/content/?$   bojanstavrikj.github.io/content/pages/content.html  [NC]
