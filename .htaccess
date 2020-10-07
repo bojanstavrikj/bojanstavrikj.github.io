@@ -1,6 +1,6 @@
-# mod_rewrite starts here
+#Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /
 
-RewriteEngine on
-
-RewriteCond %{REQUEST_URI} !^/index.html
-RewriteRule ^(.*)$ /index.html$1 [L,R=301]
+RewriteRule ^Portfolios/(.*)$ /$1 [L,NC,R]
