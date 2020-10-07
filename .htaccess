@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule   bojanstavrikj.github.io/content/?$   bojanstavrikj.github.io/content/pages/content.html  [NC]
+RewriteRule bojanstavrikj.github.io/content/?$ bojanstavrikj.github.io/content/pages/content.html [NC]
