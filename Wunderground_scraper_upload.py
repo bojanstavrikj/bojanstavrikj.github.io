@@ -123,7 +123,7 @@ list_actual = scraper(page, dates)
 
 # concat all dataframes in one
 df = pd.concat(list_actual)
-df = df.iloc[:, 1:-1].reset_index(drop=True)
+df = df.iloc[:, 1:18].reset_index(drop=True)
 
 # separate dataframes for each month
 df1 = pd.DataFrame(list_actual[0])
