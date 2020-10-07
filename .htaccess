@@ -3,4 +3,4 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule ^Portfolios/(.*)$ /$1 [L,NC,R]
+RewriteRule ^content/pages/(.*)$ /$1 [L,NC,R]
