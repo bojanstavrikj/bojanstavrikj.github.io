@@ -1,3 +1,5 @@
 RewriteEngine On
 
-RewriteRule ^content/articles/wunderground_scraper_original/wunderground_scraper\.html$ /contentwunderground_scraper?&%{QUERY_STRING}
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^content/articles/wunderground_scraper_original/wunderground_scraper\.html$ /contentwunderground_scraper? [L,R=301]
