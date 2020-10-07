@@ -7,9 +7,9 @@
     <meta name="keywords" content="Stavric, Stavrik, Stavrikj, Bojan Stavric, Bojan Svarik, web scraping, beautiful soup, beautifulsoup, selenium, chromedriver, python, web scraping python, what is web scraping, ">
     <meta ta name="author" content="Bojan Stavrikj">
     <title>Web Scraping Using Python - Wunderground</title>
-    <link rel="image_src"  href="./img/bold.png">
-    <link rel="icon"  href="./img/bold.png">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="image_src"  href="/img/bold.png">
+    <link rel="icon"  href="/img/bold.png">
+    <link rel="stylesheet" href="/css/style.css">
       <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166094935-1"></script>
     <script>
@@ -28,7 +28,7 @@
     <header>
       <div id="top-navigation">
         <h1><a href="index">Home</a></h1>
-        <h1 class="current"><a href="./content/pages/content">Content</a></h1>
+        <h1 class="current"><a href="/content/pages/content">Content</a></h1>
       </div>
     </header>
 
@@ -40,7 +40,7 @@
              <div id="share-buttons">
                 <!-- Email -->
                 <a href="mailto:?&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bojanstavrikj.github.io/wunderground_scraper">
-                    <img src="./img/mail.png">
+                    <img src="/img/mail.png">
                 </a>
 
                 <!-- Facebook -->
@@ -88,10 +88,10 @@
     import time
             </pre>
             <p>Then we will create and run two functions that would help us extract the data from the table at the bottom of the historical wunderground page, which is also shown in the image below:</p>
-            <img class="resize4" src="./img/table.png">
+            <img class="resize4" src="/img/table.png">
             <p>I will present the code section by section so I can explain what each section is meant for. The full function is available in the bottom of this page.</p>
             <p>The first function that we define is the render_page function. This is necessary because Wunderground has its own protection, and if you load the page without chromedriver and parse it, it will return no records to show. To see why, try loading the page on your browser and pay attention to how the page is loading its data. First you will see the "No data recorded" for a few seconds then the content we want will load. </p>
-            <img class="resize4" src="./img/Nodata.png">
+            <img class="resize4" src="/img/Nodata.png">
             <p>This is where we will use webdriver from selenium library and chromedriver in order to let the content fully load, after which we can parse it.  In the function below, the only thing that you need to change is to set the correct path to where you have saved your chromedriver. Quickly going through the function, <strong>(1)</strong> we make selenium run our chromedriver which opens a chrome window (make sure to replace path_to with the path to where your chromedriver is saved) <strong>(2)</strong> we tell the driver to load the specified page, <strong>(3)</strong> we set time to let the page fully load (otherwise we again get "No data recorded"), <strong>(4)</strong> we get the page resources and <strong>(5)</strong> quit the driver.</p>
             <pre class="brush: python" gutter="True">
 
@@ -195,7 +195,7 @@
     df2 = pd.DataFrame(list_actual[1])
             </pre>
             <p>To download a .py file click on the link below. In order to run it, you need to make sure you have all the libraries installed, and replace the chromedriver path with your own.</p>
-            <a id="download" href="./content/articles/wunderground_scraper_original/Wunderground_scraper_upload.py" target="_blank" download>Download File</a>
+            <a id="download" href="/content/articles/wunderground_scraper_original/Wunderground_scraper_upload.py" target="_blank" download>Download File</a>
             <p>I hope this has helped you, please contact me below in case you have any questions or improvements.</p>
 
         </div>
@@ -235,7 +235,7 @@
     </footer>
 
   <!-- Bootstrap core JS-->
-  <script src="./top_button.js"></script>
+  <script src="/top_button.js"></script>
 
   </body>
 </html>
