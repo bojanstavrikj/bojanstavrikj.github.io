@@ -1,2 +1,7 @@
 RewriteEngine On
-RewriteRule bojanstavrikj.github.io/content/?$ bojanstavrikj.github.io/content/pages/content.html [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+RewriteRule ^/content/([a-z]+)/([a-z]+) $1/articles/free_web_hosting/$2.html
