@@ -1,9 +1,2 @@
-# mod_rewrite starts here
-
-RewriteEngine on
-
-# does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule
-
-
-
-RewriteRule ^wunderground_scraper.html$ /content/page1/wunderground_scraper.html? [R=301,L]
+RewriteEngine On
+RewriteRule ^\.html$ /content/page1/wunderground_scraper [L]
