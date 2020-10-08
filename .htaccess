@@ -6,4 +6,4 @@ RewriteEngine on
 
 
 
-RewriteRule ^wunderground_scraper$ /content/page1/wunderground_scraper? [R=301,L]
+RewriteRule ^wunderground_scraper$ /content/page1/wunderground_scraper.html? [R=301,L]
