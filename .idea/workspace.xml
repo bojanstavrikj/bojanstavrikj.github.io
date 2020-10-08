@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="677083d7-cf18-4fce-9e6d-49e377b8d0ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/page1/content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/page1/free_web_hosting.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/page1/free_web_hosting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/page1/wunderground_scraper.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/page1/wunderground_scraper.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/page1.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/page1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

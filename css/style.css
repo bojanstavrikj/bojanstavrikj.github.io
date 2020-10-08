@@ -434,6 +434,37 @@ img.resize3{
     margin-left:30px;
 }
 
+
+#page-navigation .current a{
+    color:#1d3557;
+    font-weight:bold;
+}
+
+#page-navigation {
+    text-align:center;
+}
+
+#page-navigation h1 {
+    display:inline;
+    list-style-type:none;
+    padding:0 10px 0 10px;
+    font-size:16px;
+    font-weight:normal;
+    text-transform: uppercase;
+}
+
+
+#page-navigation a{
+    text-decoration:none;
+    color:#457b9d;
+}
+
+#page-navigation a:hover{
+     color: #1d3557;
+     font-weight:bold;
+}
+
+
 /*Footer*/
 
 footer {
