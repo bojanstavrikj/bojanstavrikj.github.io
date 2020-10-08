@@ -12,4 +12,9 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # Here we actually show the page that has the .html extension
 
-RewriteRule ^(.*)\.html$ /$1 [L,R=301]
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\content.html -f
+RewriteRule ^(.*)$ $1content.html [NC,L]
