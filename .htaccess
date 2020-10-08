@@ -1,1 +1,1 @@
-Redirect 301 "/wunderground_scraper" "content/page1/wunderground_scraper"
+Redirect 301 "wunderground_scraper" "content/page1/wunderground_scraper"
