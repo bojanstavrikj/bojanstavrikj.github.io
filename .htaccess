@@ -1,3 +1,3 @@
 RewriteEngine on
 
-RewriteRule ^custom bojanstavrikj.github.io/index [NC,L]
+RewriteRule ^custom bojanstavrikj.github.io/index.html [NC,L]
