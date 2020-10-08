@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tutorial article about scraping Wunderground historical data through python. The article showcases a tutorial on web scraping with python using beautifulsoup and selenium libraries in python.">
+    <meta name="keywords" content="Stavric, Stavrik, Stavrikj, Bojan Stavric, Bojan Svarik, web scraping, beautiful soup, beautifulsoup, selenium, chromedriver, python, web scraping python, what is web scraping, ">
+    <meta ta name="author" content="Bojan Stavrikj">
+    <title>Web Scraping Using Python - Wunderground</title>
+    <link rel="image_src"  href="/img/bold.png">
+    <link rel="icon"  href="/img/bold.png">
+    <link rel="stylesheet" href="/css/style.css">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166094935-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166094935-1');
+    </script>
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+
+    <header>
+      <div id="top-navigation">
+        <h1><a href="/index">Home</a></h1>
+        <h1 class="current"><a href="/content/page1">Content</a></h1>
+      </div>
+    </header>
+
+    <section>
+
+      <div class="container">
+        <div class="article1">
+            <h3>Web Scraping Wunderground - Celsius</h3>
+             <div id="share-buttons">
+                <!-- Email -->
+                <a href="mailto:?&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bojanstavrikj.github.io/wunderground_scraper">
+                    <img src="/img/mail.png">
+                </a>
+
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://bojanstavrikj.github.io/wunderground_scraper" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://bojanstavrikj.github.io/wunderground_scraper" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+
+                <!-- Print -->
+                <a href="javascript:;" onclick="window.print()">
+                    <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+                </a>
+
+                <!-- Reddit -->
+                <a href="http://reddit.com/submit?url=https://bojanstavrikj.github.io/wunderground_scraper&amp;title=Web Scarping Wuderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://bojanstavrikj.github.io/wunderground_scraper&amp;hashtags=datascience,webscraping,wunderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+            <p>This article is related to my other wunderground scraper article, and will explain how to use selenium driver in order to load the data directly in Celsius. If you are landing on this article, I suggest that you first check out the <a href="https://bojanstavrikj.github.io/content/page1/wunderground_scraper" target="_blank">Wunderground Scraper article</a> for better understanding.</p>
+            <p>Since by default Wunderground loads the data in Fahrenheit, we need to perform several clicks to instruct the page to load the data in Celsius. Please note that this loads the whole data in metric units. So the wind speed, pressure and precipitation will also be in metric units.</p>
+            <p></p>
+            <p>In order to do this we need to change the render function slightly and let the data load in Celsius:</p>
+            <pre class="brush: python">
+
+    def render_page(url):
+    driver = webdriver.Chrome('/Users/bojanstavrikj/Downloads/chromedriver')
+    driver.get(url)
+    time.sleep(3)
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, 'wuSettings'))
+    )
+    element.click()
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, '//*[@id="wuSettings-quick"]/div/a[2]')))
+    element.click()
+    time.sleep(3)
+    r = driver.page_source
+    driver.quit()
+    return r
+            </pre>
+            <p>What we are doing here is defining a clickable element by finding the button ID. Let's use the Lisboa weather history Wunderground page as an example. If you open <a href="https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date", target="_blank">this page</a> and right-click, inspect the settings button in the top right corner you will see something like the below:</p>
+            <img class="resize4" src="/content/page1/files/inspect-element-wunderground.png">
+            <p>As you see the button ID that we want to first click is 'wuSettings' (the first highlighted rectangle). Therefore, we use this to define the first clickable element and click it. Once this opens, we have a second button in order to change the data to Celsius. If you see the inspect element section here (second rectangle), the two button options for Fahrenheit/Celsius are under a div tag, then each under a separate a tag. In this case we are looking for the second a tag, therefore its path being "//*[@id="wuSettings-quick"]/div/a[2]". With this we define a second clickable element and click it. We let the page load and we get the page resources.</p>
+            <p>Please note, that sometimes the pages load slower in which case you might need to increase the time.sleep(3) command from 3 to 5 or more if necessary. Now that the render function is updated, you can just replace the old one with this one, run the remainder of the code and your data will be extracted in metric units. I have put together a .py file including the scraping  function from before, and it's available for download <a id="download" href="/content/page1/files/Wunderground_scraper_celsius_upload.py" target="_blank">here</a>.</p>
+            <p>Another important thing to note is that this makes the scraper run slower, in case you are scraping data over many years it might be better to perform the conversions on your own. Therefore, another option is to extract the data as in the original article in Fahrenheit and later apply the following code in order to transform it to metric units.</p>
+
+            <pre class="brush: python" gutter="True">
+    # First we need to convert the dataframe to numeric type
+    # Select all the columns except Date
+    cols = df.columns.drop('Date')
+    # Convert all columns except date to numeric
+    df[cols] = df[cols].apply(pd.to_numeric)
+
+    # select columns to apply the Fahrenheit to Celsius formula to
+    cols_convert = df.columns[0:6]
+    # apply formula to those columns
+    df[cols_convert] = df[cols_convert].apply(lambda x: (x-32)*5/9)
+
+    # select columns to apply the mph to kmh formula to
+    cols_convert = df.columns[9:12]
+    # apply formula to those columns
+    df[cols_convert] = df[cols_convert].apply(lambda x: x*1.60934)
+
+    # select columns to apply the Hg to milibar formula to
+    cols_convert = df.columns[12:15]
+    # apply formula to those columns
+    df[cols_convert] = df[cols_convert].apply(lambda x: x*33.8639)
+
+    # select columns to apply the in to mm formula to
+    cols_convert = df.columns[15:16]
+    # apply formula to those columns
+    df[cols_convert] = df[cols_convert].apply(lambda x: x*25.4)
+            </pre>
+            <p>I hope this has helped you, please contact me below in case you have any questions or improvements.</p>
+
+        </div>
+      </div>
+    </section>
+
+   <div class="contact">
+      <h2>Let's Get In Touch!</h2>
+      <form id="contactform" action="https://formspree.io/moqkaror" method="POST">
+        <div class="input">
+          <p>Name</p><input name="name">
+        </div>
+        <div class="input">
+          <p>Email</p><input type="email" name="_replyto">
+        </div>
+        <div class="input">
+          <p>Message</p>
+          <textarea name="body"></textarea>
+        </div>
+        <div class="input">
+          <input id="button" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="icons">
+        <a class="socialIcons" href="https://www.facebook.com/bojanstavrik" title="facebook"><i class="fab fa-facebook-square" style="color:0072DE"></i></a>
+        <a class="socialIcons" href="https://www.linkedin.com/in/bojan-stavrikj-062995b6/" title=";linkedin"><i class="fab fa-linkedin" style="color:0480F5"></i></a>
+        <a class="socialIcons" href="https://www.youtube.com/user/bojanmkd1/featured?view_as=subscriber" title="youtube"><i class="fab fa-youtube" style="color:EA0012"></i></a>
+      </div>
+     <!-- <div class="contact">
+        <a href="mailto:bojanstavrik@gmail.com">bojanstavrik@gmail.com</a>
+        <a href="tel:+351915654942">+351 915654942</a>
+      </div>-->
+      <p>Bojan Stavrikj 2020 &copy;</p>
+    </footer>
+
+  <!-- Bootstrap core JS-->
+  <script src="/top_button.js"></script>
+
+  </body>
+</html>

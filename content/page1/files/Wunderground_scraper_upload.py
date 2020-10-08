@@ -111,9 +111,15 @@ def scraper(page, dates):
 
         list_of_df.append(df_final)
 
+        output = output.append(df_final)
+
     print('Scraper done!')
 
-    return list_of_df
+    output = output[['Temp_avg', 'Temp_min', 'Dew_max', 'Dew_avg', 'Dew_min', 'Hum_max',
+                     'Hum_avg', 'Hum_min', 'Wind_max', 'Wind_avg', 'Wind_min', 'Pres_max',
+                     'Pres_avg', 'Pres_min', 'Precipitation', 'Date']]
+
+    return list_of_df, output
 
 
 dates = ['2019-4', '2019-5']
