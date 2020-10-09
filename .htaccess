@@ -14,4 +14,4 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # Here we actually show the page that has the .html extension
 
-RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteRule ^(.*)$ $1/content/page1/wunderground_scraper_celsius.html [NC,L]
