@@ -1,3 +1,2 @@
-RewriteEngine on
-	
-RewriteRule ^/wunderground_scraper$ /content/page1/wunderground_scraper.html [L,R=301]
+
+Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper.html
