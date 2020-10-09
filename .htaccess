@@ -1,2 +1,4 @@
 
-Redirect 301 /wunderground_scraper http://bojanstavrikj.github.io/content/page1/wunderground_scraper.html
+RewriteEngine on
+
+RewriteRule ^/wunderground_scraper$ /content/page1/wunderground_scraper.html [L, R=permanent, QSA]
