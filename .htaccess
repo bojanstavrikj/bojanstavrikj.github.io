@@ -3,7 +3,7 @@
 RewriteEngine on
 RewriteBase /
 
-RewriteRule ^wunderground_scraper(/.*)?$ https://bojanstavrikj.github.io/content/page1/wunderground_scraper [L,R=301,NC]
+RewriteRule ^/wunderground_scraper(.*)?$ https://bojanstavrikj.github.io/content/page1/wunderground_scraper [L,R=301,NC]
 
 
 
