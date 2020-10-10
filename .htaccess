@@ -1,10 +1,5 @@
 # mod_rewrite starts here
 RewriteEngine on
-RewriteBase /
-
-Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
-
-
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
