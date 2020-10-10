@@ -4,8 +4,6 @@ Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1
 # mod_rewrite starts here
 RewriteEngine on
 
-RewriteRule ^wunderground_scraper/?$ content/page1/wunderground_scraper [L,NC,R=301]
-
 # does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule
 
 RewriteCond %{REQUEST_FILENAME} !-d
