@@ -16,4 +16,4 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-RewriteRule ^wunderground_scraper/?$ content/page1/wunderground_scraper [L,NC,R=301]
+RewriteRule ^wunderground_scraper?$ content/page1/wunderground_scraper [L,NC,R=301]
