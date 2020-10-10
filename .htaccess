@@ -18,4 +18,4 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 
 RewriteEngine on
 
-Redirect /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
+Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
