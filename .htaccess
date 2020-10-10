@@ -1,15 +1,11 @@
-<IfModule mod_rewrite.c>
 # mod_rewrite starts here
 RewriteEngine on
 RewriteBase /
 
-RewriteRule ^/wunderground_scraper(.*)?$ https://bojanstavrikj.github.io/content/page1/wunderground_scraper [L,R=301,NC]
-
+Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
 
 
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
-
-</IfModule>
