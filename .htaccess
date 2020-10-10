@@ -2,7 +2,7 @@
 # mod_rewrite starts here
 RewriteEngine on
 
-RewriteRule ^/wunderground_scraper$ https://bojanstavrikj.github.io/content/page1/wunderground_scraper [R=301,L]
+Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
 
 # does not apply to existing directories, meaning that if the folder exists on the server then don't change anything and don't run the Rule
 
