@@ -18,4 +18,4 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 
 RewriteEngine on
 
-RewriteRule ^/wunderground_scraper?$ content/page1/wunderground_scraper [L,NC,R=301]
+Rewrite /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
