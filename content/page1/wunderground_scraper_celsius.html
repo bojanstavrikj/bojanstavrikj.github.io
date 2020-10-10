@@ -75,7 +75,7 @@
             <pre class="brush: python">
 
     def render_page(url):
-    driver = webdriver.Chrome('/Users/bojanstavrikj/Downloads/chromedriver')
+    driver = webdriver.Chrome('path_to/chromedriver')
     driver.get(url)
     time.sleep(3)
     element = WebDriverWait(driver, 10).until(
