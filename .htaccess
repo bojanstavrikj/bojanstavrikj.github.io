@@ -18,4 +18,4 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 </IfModule>
 
 
-Redirect 301 /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
+Redirect /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
