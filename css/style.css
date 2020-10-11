@@ -484,6 +484,11 @@ footer {
     text-align:center;
 }
 
+footer p, a{
+    text-decoration:none;
+    color:#f28e02;
+}
+
 .contact a, a:hover, a:active, a:visited { color: white; }
 .contact a{
     display:inline;
