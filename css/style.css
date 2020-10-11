@@ -401,13 +401,7 @@ img.resize3{
     width: 50%;
 }
 
-.article1 pre{
-    overflow: auto;
-    background-color: #eeeeee;
-    word-break: normal !important;
-    word-wrap: normal !important;
-    white-space: pre !important;
-}
+
 .article1 #download{
     color:#457b9d;
 }
