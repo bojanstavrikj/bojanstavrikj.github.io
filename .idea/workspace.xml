@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="677083d7-cf18-4fce-9e6d-49e377b8d0ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,21 +72,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="326" y="23" key="#Wunderground_ultimate_scraper" timestamp="1588109465810">
-      <screen x="0" y="23" width="1280" height="749" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1602419757620">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="326" y="23" key="#Wunderground_ultimate_scraper/0.23.1280.749@0.23.1280.749" timestamp="1588109465810" />
-    <state width="640" height="374" key="XDebugger.FullValuePopup" timestamp="1590144443719">
-      <screen x="0" y="23" width="1280" height="749" />
-    </state>
-    <state width="640" height="374" key="XDebugger.FullValuePopup/0.23.1280.749@0.23.1280.749" timestamp="1590144443719" />
-    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590147148837">
-      <screen x="0" y="23" width="1280" height="749" />
-    </state>
-    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.749@0.23.1280.749" timestamp="1590147148837" />
-    <state x="305" y="96" width="670" height="676" key="search.everywhere.popup" timestamp="1590227495105">
-      <screen x="0" y="23" width="1280" height="749" />
-    </state>
-    <state x="305" y="96" width="670" height="676" key="search.everywhere.popup/0.23.1280.749@0.23.1280.749" timestamp="1590227495105" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1602419757620" />
   </component>
 </project>
