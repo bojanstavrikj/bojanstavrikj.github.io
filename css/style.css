@@ -483,11 +483,11 @@ footer {
     border-bottom:#f28e02 3px solid;
     text-align:center;
 }
-footer a:{
+footer a, a:hover, a:active, a:visited {
     text-decoration:none;
     padding:20px;
     margin-top:20px;
-    color:#f28e02;
+    text-color:#f28e02;
     text-align:center;
 }
 
