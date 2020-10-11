@@ -486,11 +486,12 @@ footer {
 
 /*Bottom Navigation*/
 #bot-navigation .current a{
-    color:#f1faee;
+    color:#f28e02;
     font-weight:bold;
 }
 
 #bot-navigation {
+    padding-top:10px;
     text-align:center;
 }
 
@@ -509,7 +510,7 @@ footer {
 }
 
 #bot-navigation a:hover{
-     color: #f1faee;
+     color: #f28e02;
      font-weight:bold;
 }
 
