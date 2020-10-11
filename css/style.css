@@ -483,13 +483,6 @@ footer {
     border-bottom:#f28e02 3px solid;
     text-align:center;
 }
-footer a{
-    text-decoration:none;
-    padding:20px;
-    margin-top:20px;
-    text-color:#f28e02;
-    text-align:center;
-}
 
 .contact a, a:hover, a:active, a:visited { color: white; }
 .contact a{
