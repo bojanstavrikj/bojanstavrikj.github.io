@@ -486,7 +486,7 @@ footer {
 
 /*Bottom Navigation*/
 #bot-navigation .current a{
-    color:#1d3557;
+    color:#f28e02;
     font-weight:bold;
 }
 
@@ -506,7 +506,7 @@ footer {
 
 #bot-navigation a{
     text-decoration:none;
-    color:#457b9d;
+    color:#f28e02;
 }
 
 #bot-navigation a:hover{
