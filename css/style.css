@@ -486,7 +486,7 @@ footer {
 
 footer p, a{
     text-decoration:none;
-    color:#f28e02;
+    text-color:#f28e02;
 }
 
 .contact a, a:hover, a:active, a:visited { color: white; }
