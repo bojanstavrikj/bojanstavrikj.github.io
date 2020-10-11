@@ -77,19 +77,19 @@
             <p>Before we start, you need to make sure to install the following libraries in your python environment:</p>
             <pre>
             <code class="python">
-                pip install beautifulsoup4
-                pip install selenium
+    pip install beautifulsoup4
+    pip install selenium
             </code>
             </pre>
             <p>The other libraries that will be used are more standard and most people would already have them installed in their environment. Another thing that needs to be installed for this process is ChromeDriver. You can find the instructions on installing it on the following <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a>. Download it, install it and place it in a folder that is easily accessible to you. Once you have made sure that the above requirements are satisfied we can start with building the code in python.</p>
             <p>First, we import all the necessary libraries:</p>
             <pre>
                 <code class="python">
-                    from bs4 import BeautifulSoup as BS
-                    from selenium import webdriver
-                    from functools import reduce
-                    import pandas as pd
-                    import time
+    from bs4 import BeautifulSoup as BS
+    from selenium import webdriver
+    from functools import reduce
+    import pandas as pd
+    import time
                 </code>
             </pre>
             <p>Then we will create and run two functions that would help us extract the data from the table at the bottom of the historical wunderground page, which is also shown in the image below:</p>
@@ -99,107 +99,110 @@
             <img class="resize4" src="/img/Nodata.png">
             <p>This is where we will use webdriver from selenium library and chromedriver in order to let the content fully load, after which we can parse it.  In the function below, the only thing that you need to change is to set the correct path to where you have saved your chromedriver. Quickly going through the function, <strong>(1)</strong> we make selenium run our chromedriver which opens a chrome window (make sure to replace path_to with the path to where your chromedriver is saved) <strong>(2)</strong> we tell the driver to load the specified page, <strong>(3)</strong> we set time to let the page fully load (otherwise we again get "No data recorded"), <strong>(4)</strong> we get the page resources and <strong>(5)</strong> quit the driver.</p>
             <pre>
-            <code class="python">
-                def render_page(url):
-                    driver = webdriver.Chrome('path_to/chromedriver')
-                    driver.get(url)
-                    time.sleep(3)
-                    r = driver.page_source
-                    driver.quit()
-                    return r
-            </code>
+                <code class="python">
+    def render_page(url):
+        driver = webdriver.Chrome('path_to/chromedriver')
+        driver.get(url)
+        time.sleep(3)
+        r = driver.page_source
+        driver.quit()
+        return r
+                </code>
             </pre>
             <p>This function will be called within the next function that we will define. The next function, which we'll call scraper will use the render page function to load the data, and ultimately scrape the information we want.</p>
             <p>The function needs only two arguments, the first one is the page that we want to scrape. For this it is important to understand the structure of wundergound's url. I will use Lisbon, Portugal as an example since I am currently living here. The page for the month of May 2020 is: https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date/2020-5. What needs to be inputted in the page argument is the url up until the date ( https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date/). To understand this better we need to look at the second argument in the functions. In the dates argument we will input a date or a list of dates in the following format (yyyy-m). The function will loop through all the dates we want and load the full url's for all the listed dates.</p>
             <p><strong>(1)</strong> Within the function we first create an empty list which will later be appended once we have arranged our data correctly. <strong>(2)</strong> we loop through all the dates passed in the arguments <strong>(3)</strong> we put the function arguments together for loading the url. <strong>(4)</strong> we call the render page function to load the url. <strong>(5)</strong> We then call the BeautifulSoup library to parse the html content of the page. <strong>(6)</strong> We find the specific div's in the html code and extract the content from it. This stores all the content in a list. <strong>(7)</strong> From the list we then extract a separate dataframe for Date, Temperature, Dew_Point, Humidity, Wind, Pressure and Precipitation depending on its length, which is related to the length of each month. <strong>(8)</strong> we create a list of the dataframes from step <strong>(7)</strong>. <strong>(9)</strong> Then we merge all these dataframes into one final one. <strong>(10)</strong> Creating a proper date column. <strong>(11)</strong> We append the empty list created in step <strong>(1)</strong>. All of these steps are looped through and repeated for each date inputted in the date argument in the function.</p>
             <pre>
-            <code class="python">
-                def scraper(page,dates):
-                    list_of_df=list()
+                <code class="python">
+    def scraper(page,dates):
+    list_of_df=list()
 
-                    for d in dates:
+    for d in dates:
 
-                        url = str(str(page)+str(d))
-                        r = render_page(url)
+        url = str(str(page)+str(d))
+        r = render_page(url)
 
-                        soup = BS(r, "html.parser")
-                        container = soup.find('lib-city-history-observation')
-                        check = container.find('tbody')
+        soup = BS(r, "html.parser")
+        container = soup.find('lib-city-history-observation')
+        check = container.find('tbody')
 
-                        data=[]
+        data=[]
 
-                        for c in check.find_all('tr',class_='ng-star-inserted'):
-                            for i in c.find_all('td',class_='ng-star-inserted'):
-                                trial = i.text
-                                trial = trial.strip('  ')
-                                data.append(trial)
+        for c in check.find_all('tr',class_='ng-star-inserted'):
+            for i in c.find_all('td',class_='ng-star-inserted'):
+                trial = i.text
+                trial = trial.strip('  ')
+                data.append(trial)
 
-                        if round(len(data)/17-1)==31:
-                            Temperature = pd.DataFrame([data[32:128][x:x+3] for x in range(0, len(data[32:128]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
-                            Dew_Point = pd.DataFrame([data[128:224][x:x+3] for x in range(0, len(data[128:224]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
-                            Humidity = pd.DataFrame([data[224:320][x:x+3] for x in range(0, len(data[224:320]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
-                            Wind = pd.DataFrame([data[320:416][x:x+3] for x in range(0, len(data[320:416]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
-                            Pressure = pd.DataFrame([data[416:512][x:x+3] for x in range(0, len(data[416:512]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
-                            Date = pd.DataFrame(data[:32][1:],columns=data[:1])
-                            Precipitation = pd.DataFrame(data[512:][1:],columns=['Precipitation'])
-                            print(str(str(d)+' finished!'))
-                        elif round(len(data)/17-1)==28:
-                            Temperature = pd.DataFrame([data[29:116][x:x+3] for x in range(0, len(data[29:116]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
-                            Dew_Point = pd.DataFrame([data[116:203][x:x+3] for x in range(0, len(data[116:203]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
-                            Humidity = pd.DataFrame([data[203:290][x:x+3] for x in range(0, len(data[203:290]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
-                            Wind = pd.DataFrame([data[290:377][x:x+3] for x in range(0, len(data[290:377]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
-                            Pressure = pd.DataFrame([data[377:464][x:x+3] for x in range(0, len(data[377:463]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
-                            Date = pd.DataFrame(data[:29][1:],columns=data[:1])
-                            Precipitation = pd.DataFrame(data[464:][1:],columns=['Precipitation'])
-                            print(str(str(d)+' finished!'))
-                        elif round(len(data)/17-1)==29:
-                            Temperature = pd.DataFrame([data[30:120][x:x+3] for x in range(0, len(data[30:120]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
-                            Dew_Point = pd.DataFrame([data[120:210][x:x+3] for x in range(0, len(data[120:210]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
-                            Humidity = pd.DataFrame([data[210:300][x:x+3] for x in range(0, len(data[210:300]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
-                            Wind = pd.DataFrame([data[300:390][x:x+3] for x in range(0, len(data[300:390]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
-                            Pressure = pd.DataFrame([data[390:480][x:x+3] for x in range(0, len(data[390:480]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
-                            Date = pd.DataFrame(data[:30][1:],columns=data[:1])
-                            Precipitation = pd.DataFrame(data[480:][1:],columns=['Precipitation'])
-                            print(str(str(d)+' finished!'))
-                        elif round(len(data)/17-1)==30:
-                            Temperature = pd.DataFrame([data[31:124][x:x+3] for x in range(0, len(data[31:124]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
-                            Dew_Point = pd.DataFrame([data[124:217][x:x+3] for x in range(0, len(data[124:217]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
-                            Humidity = pd.DataFrame([data[217:310][x:x+3] for x in range(0, len(data[217:310]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
-                            Wind = pd.DataFrame([data[310:403][x:x+3] for x in range(0, len(data[310:403]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
-                            Pressure = pd.DataFrame([data[403:496][x:x+3] for x in range(0, len(data[403:496]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
-                            Date = pd.DataFrame(data[:31][1:],columns=data[:1])
-                            Precipitation = pd.DataFrame(data[496:][1:],columns=['Precipitation'])
-                            print(str(str(d)+' finished!'))
-                        else:
-                            print('Data not in normal length')
+        if round(len(data)/17-1)==31:
+            Temperature = pd.DataFrame([data[32:128][x:x+3] for x in range(0, len(data[32:128]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
+            Dew_Point = pd.DataFrame([data[128:224][x:x+3] for x in range(0, len(data[128:224]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
+            Humidity = pd.DataFrame([data[224:320][x:x+3] for x in range(0, len(data[224:320]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
+            Wind = pd.DataFrame([data[320:416][x:x+3] for x in range(0, len(data[320:416]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
+            Pressure = pd.DataFrame([data[416:512][x:x+3] for x in range(0, len(data[416:512]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
+            Date = pd.DataFrame(data[:32][1:],columns=data[:1])
+            Precipitation = pd.DataFrame(data[512:][1:],columns=['Precipitation'])
+            print(str(str(d)+' finished!'))
+        elif round(len(data)/17-1)==28:
+            Temperature = pd.DataFrame([data[29:116][x:x+3] for x in range(0, len(data[29:116]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
+            Dew_Point = pd.DataFrame([data[116:203][x:x+3] for x in range(0, len(data[116:203]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
+            Humidity = pd.DataFrame([data[203:290][x:x+3] for x in range(0, len(data[203:290]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
+            Wind = pd.DataFrame([data[290:377][x:x+3] for x in range(0, len(data[290:377]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
+            Pressure = pd.DataFrame([data[377:464][x:x+3] for x in range(0, len(data[377:463]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
+            Date = pd.DataFrame(data[:29][1:],columns=data[:1])
+            Precipitation = pd.DataFrame(data[464:][1:],columns=['Precipitation'])
+            print(str(str(d)+' finished!'))
+        elif round(len(data)/17-1)==29:
+            Temperature = pd.DataFrame([data[30:120][x:x+3] for x in range(0, len(data[30:120]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
+            Dew_Point = pd.DataFrame([data[120:210][x:x+3] for x in range(0, len(data[120:210]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
+            Humidity = pd.DataFrame([data[210:300][x:x+3] for x in range(0, len(data[210:300]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
+            Wind = pd.DataFrame([data[300:390][x:x+3] for x in range(0, len(data[300:390]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
+            Pressure = pd.DataFrame([data[390:480][x:x+3] for x in range(0, len(data[390:480]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
+            Date = pd.DataFrame(data[:30][1:],columns=data[:1])
+            Precipitation = pd.DataFrame(data[480:][1:],columns=['Precipitation'])
+            print(str(str(d)+' finished!'))
+        elif round(len(data)/17-1)==30:
+            Temperature = pd.DataFrame([data[31:124][x:x+3] for x in range(0, len(data[31:124]),3)][1:],columns=['Temp_max','Temp_avg','Temp_min'])
+            Dew_Point = pd.DataFrame([data[124:217][x:x+3] for x in range(0, len(data[124:217]),3)][1:],columns=['Dew_max','Dew_avg','Dew_min'])
+            Humidity = pd.DataFrame([data[217:310][x:x+3] for x in range(0, len(data[217:310]),3)][1:],columns=['Hum_max','Hum_avg','Hum_min'])
+            Wind = pd.DataFrame([data[310:403][x:x+3] for x in range(0, len(data[310:403]),3)][1:],columns=['Wind_max','Wind_avg','Wind_min'])
+            Pressure = pd.DataFrame([data[403:496][x:x+3] for x in range(0, len(data[403:496]),3)][1:],columns=['Pres_max','Pres_avg','Pres_min'])
+            Date = pd.DataFrame(data[:31][1:],columns=data[:1])
+            Precipitation = pd.DataFrame(data[496:][1:],columns=['Precipitation'])
+            print(str(str(d)+' finished!'))
+        else:
+            print('Data not in normal length')
 
-                        dfs = [Date, Temperature, Dew_Point, Humidity, Wind, Pressure, Precipitation]
-                        df_final =reduce(lambda left,right: pd.merge(left,right,left_index=True,right_index=True), dfs)
-                        df_final['Date'] = str(d) +"-"+ df_final.iloc[:,:1].astype(str)
-                        list_of_df.append(df_final)
-                    print('Scraper done!')
+        dfs = [Date, Temperature, Dew_Point, Humidity, Wind, Pressure, Precipitation]
+        df_final =reduce(lambda left,right: pd.merge(left,right,left_index=True,right_index=True), dfs)
+        df_final['Date'] = str(d) +"-"+ df_final.iloc[:,:1].astype(str)
+        list_of_df.append(df_final)
+    print('Scraper done!')
 
-                    return list_of_df
-            </code>
+    return list_of_df
+                </code>
             </pre>
             <p>Once we have both of these functions run, all we need to do is create a list of dates we want, define the page we want and run the scraper with those inputs as shown below:</p>
             <pre class="brush: python">
-
+                <code class="python">
     dates = ['2019-4','2019-5']
     page = 'https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date/'
     list_actual = scraper(page,dates)
+                </code>
             </pre>
             <p>This outputs a list of dataframes for each month, which can then be extracted as a full dataframe using the following lines of code:</p>
-            <pre class="brush: python">
-
+            <pre>
+                <code class="python">
     df = pd.concat(list_actual)
     df = df.iloc[:,1:-1].reset_index(drop=True)
+                </code>
             </pre>
             <p>Or if you want a separate dataframe for each month, you can run the following lines of code:</p>
-            <pre class="brush: python">
-
+            <pre>
+                <code class="python">
     df1 = pd.DataFrame(list_actual[0])
     df2 = pd.DataFrame(list_actual[1])
+                </code>
             </pre>
             <p>To download a .py file click on the link below. In order to run it, you need to make sure you have all the libraries installed, and replace the chromedriver path with your own.</p>
             <a id="download" href="/content/page1/files/Wunderground_scraper_upload.py" target="_blank" download>Download File</a>
