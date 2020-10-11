@@ -483,12 +483,11 @@ footer {
     border-bottom:#f28e02 3px solid;
     text-align:center;
 }
-footer a{
+footer a:{
+    text-decoration:none;
     padding:20px;
     margin-top:20px;
-    background:#1d3557;
     color:#f28e02;
-    border-bottom:#f28e02 3px solid;
     text-align:center;
 }
 
