@@ -484,7 +484,7 @@ footer {
     text-align:center;
 }
 
-#sitemaps p, a, a:visited {
+#sitemaps a{
     text-decoration:none;
     color:#f28e02;
 }
