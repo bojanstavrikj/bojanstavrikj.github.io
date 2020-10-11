@@ -83,13 +83,14 @@
             </pre>
             <p>The other libraries that will be used are more standard and most people would already have them installed in their environment. Another thing that needs to be installed for this process is ChromeDriver. You can find the instructions on installing it on the following <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a>. Download it, install it and place it in a folder that is easily accessible to you. Once you have made sure that the above requirements are satisfied we can start with building the code in python.</p>
             <p>First, we import all the necessary libraries:</p>
-            <pre class="brush: python">
-
+            <pre>
+<code class="language-python">
     from bs4 import BeautifulSoup as BS
     from selenium import webdriver
     from functools import reduce
     import pandas as pd
     import time
+    </code>
             </pre>
             <p>Then we will create and run two functions that would help us extract the data from the table at the bottom of the historical wunderground page, which is also shown in the image below:</p>
             <img class="resize4" src="/img/table.png">
