@@ -486,7 +486,7 @@ footer {
 
 /*Bottom Navigation*/
 #bot-navigation .current a{
-    color:#f28e02;
+    color:#f1faee;
     font-weight:bold;
 }
 
@@ -500,7 +500,6 @@ footer {
     padding:0 10px 0 10px;
     font-size:16px;
     font-weight:normal;
-    text-transform: uppercase;
 }
 
 
@@ -510,7 +509,7 @@ footer {
 }
 
 #bot-navigation a:hover{
-     color: #1d3557;
+     color: #f1faee;
      font-weight:bold;
 }
 
