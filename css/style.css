@@ -483,6 +483,14 @@ footer {
     border-bottom:#f28e02 3px solid;
     text-align:center;
 }
+footer a{
+    padding:20px;
+    margin-top:20px;
+    background:#1d3557;
+    color:#f28e02;
+    border-bottom:#f28e02 3px solid;
+    text-align:center;
+}
 
 .contact a, a:hover, a:active, a:visited { color: white; }
 .contact a{
