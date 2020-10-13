@@ -35,7 +35,6 @@ def render_page(url):
 
 # function to scrape wunderground
 def scraper(page,dates):
-    list_of_df=list()
     output = pd.DataFrame()
 
     for d in dates:
@@ -101,8 +100,6 @@ def scraper(page,dates):
 
         df_final['Date'] = str(d) +"-"+ df_final.iloc[:,:1].astype(str)
 
-        list_of_df.append(df_final)
-
         output = output.append(df_final)
 
     print('Scraper done!')
@@ -111,20 +108,10 @@ def scraper(page,dates):
                         'Hum_avg', 'Hum_min', 'Wind_max', 'Wind_avg', 'Wind_min', 'Pres_max',
                         'Pres_avg', 'Pres_min', 'Precipitation', 'Date']]
 
-    return list_of_df, output
+    return output
 
 
 dates = ['2020-5','2020-4','2020-3']
 page = 'https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date/'
 
-list_actual, output = scraper(page,dates)
-
-#temperatures are in Fahrenheit
-
-# concat all dataframes in one
-df = pd.concat(list_actual)
-df = df.iloc[:,1:18].reset_index(drop=True)
-
-# separate dataframes for each month
-df1 = pd.DataFrame(list_actual[0])
-df2 = pd.DataFrame(list_actual[1])
+df_output = scraper(page,dates)
