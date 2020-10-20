@@ -89,7 +89,7 @@
                 </code>
             </pre>
             <p>This is a pretty easy way of solving the redirect. Although, as WS3 point out some web browsers get confused so it’s not recommended.</p>
-            <ol>
+            <ol start="2">
                 <li>Redirect old to new URL using Javascript</li>
             </ol>
             <p>This is another easy and better way of doing the redirect. Going back to my example, I used the following code in the header of my page:</p>
@@ -105,16 +105,17 @@
                 </code>
             </pre>
             <p>This would also achieve the same result. And now if you search in your browser for this page: https://bojanstavrikj.github.io/wunderground_scraper you would be redirected to https://bojanstavrikj.github.io/content/page1/wunderground_scraper.</p>
+            <ol start="3">
               <li>Redirect old to new URL using .htaccess file</li>
-                <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to (1) create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
-                <p>In my case the old path was /wunderground_scraper, and the new path is /content/page1/wunderground_scraper. Therefore, for this example the redirect would be:</p>
-                <pre>
-                    <code class="python">
-    Redirect /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
-                    </code>
-                </pre>
-                <p>Note that you need to leave a space between the Redirect, old and new path to the website.</p>
             </ol>
+            <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to (1) create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
+            <p>In my case the old path was /wunderground_scraper, and the new path is /content/page1/wunderground_scraper. Therefore, for this example the redirect would be:</p>
+            <pre>
+                <code class="python">
+    Redirect /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
+                </code>
+            </pre>
+            <p>Note that you need to leave a space between the Redirect, old and new path to the website.</p>
 
             <p>What we are doing here is defining a clickable element by finding the button ID. Let's use the Lisboa weather history Wunderground page as an example. If you open <a href="https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date", target="_blank">this page</a> and right-click, inspect the settings button in the top right corner you will see something like the below:</p>
 
