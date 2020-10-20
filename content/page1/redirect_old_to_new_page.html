@@ -76,7 +76,7 @@
             <img class="resize4" src="/content/page1/files/directory1.png">
             <p>Opening that page would correspond to this URL: <a href="https://bojanstavrikj.github.io/wunderground_scraper" target="_blank">https://bojanstavrikj.github.io/wunderground_scraper</a>. At some point my root directory started getting quite messy, so I decided to organize the content part of my page into different folders as shown below.</p>
             <img class="resize4" src="/content/page1/files/directory2.png">
-            <p>Once this move was implemented, the URL for the same page changed to: https://bojanstavrikj.github.io/content/page1/wunderground_scraper. Therefore, trying to open the old link in a web browser would throw an error.</p>
+            <p>Once this move was implemented, the URL for the same page changed to: <a href="https://bojanstavrikj.github.io/content/page1/wunderground_scraper" target="_blank">https://bojanstavrikj.github.io/content/page1/wunderground_scraper</a>. Therefore, trying to open the old link in a web browser would throw an error.</p>
             <p>Assuming, the old link has been optimized for search engine optimization (SEO) and is already bringing in traffic to your website you would probably like to redirect any user trying to access the old URL to the new one. There are several ways of doing this.</p>
             <p>Keep in mind that the original files still need to be online at the original location. So using my case as an example, if you look at the second image above my wunderground_scraper.html page file is present both in the root directory and in the new directory. Therefore, the changes implemented for points 1 and 2 below will be done on the file in the root directory.</p>
             <ol>
@@ -104,11 +104,11 @@
     &lt;/script&gt;
                 </code>
             </pre>
-            <p>This would also achieve the same result. And now if you search in your browser for this page: https://bojanstavrikj.github.io/wunderground_scraper you would be redirected to https://bojanstavrikj.github.io/content/page1/wunderground_scraper.</p>
+            <p>This would also achieve the same result. And now if you search in your browser for this page: <a href="https://bojanstavrikj.github.io/wunderground_scraper", target="_blank">https://bojanstavrikj.github.io/wunderground_scraper</a> you would be redirected to <a href="https://bojanstavrikj.github.io/content/page1/wunderground_scraper", target="_blank">https://bojanstavrikj.github.io/content/page1/wunderground_scraper</a>.</p>
             <ol start="3">
                 <li><b>Redirect old to new URL using .htaccess file</b></li>
             </ol>
-            <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to (1) create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
+            <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
             <p>In my case the old path was /wunderground_scraper, and the new path is /content/page1/wunderground_scraper. Therefore, for this example the redirect would be:</p>
             <pre>
                 <code class="python">
@@ -116,8 +116,6 @@
                 </code>
             </pre>
             <p>Note that you need to leave a space between the Redirect, old and new path to the website.</p>
-
-            <p>What we are doing here is defining a clickable element by finding the button ID. Let's use the Lisboa weather history Wunderground page as an example. If you open <a href="https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date", target="_blank">this page</a> and right-click, inspect the settings button in the top right corner you will see something like the below:</p>
 
             <p>I hope this has helped you, please contact me below in case you have any questions or improvements.</p>
 
