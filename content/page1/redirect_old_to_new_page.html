@@ -80,7 +80,7 @@
             <p>Assuming, the old link has been optimized for search engine optimization (SEO) and is already bringing in traffic to your website you would probably like to redirect any user trying to access the old URL to the new one. There are several ways of doing this.</p>
             <p>Keep in mind that the original files still need to be online at the original location. So using my case as an example, if you look at the second image above my wunderground_scraper.html page file is present both in the root directory and in the new directory. Therefore, the changes implemented for points 1 and 2 below will be done on the file in the root directory.</p>
             <ol>
-                <li>Redirect old to new URL using HTML</li>
+                <li><b>Redirect old to new URL using HTML</b></li>
             </ol>
             <p>One of the simplest ways of implementing this is by instructing the web browser to redirect users to a new page using a meta tag in the header of your HTML page. For my case, I would open the wunderground_scraper.html file from my root directory (first image) and use the following code:</p>
             <pre>
@@ -90,7 +90,7 @@
             </pre>
             <p>This is a pretty easy way of solving the redirect. Although, as WS3 point out some web browsers get confused so it’s not recommended.</p>
             <ol start="2">
-                <li>Redirect old to new URL using Javascript</li>
+                <li><b>Redirect old to new URL using Javascript</b></li>
             </ol>
             <p>This is another easy and better way of doing the redirect. Going back to my example, I used the following code in the header of my page:</p>
             <pre>
@@ -106,7 +106,7 @@
             </pre>
             <p>This would also achieve the same result. And now if you search in your browser for this page: https://bojanstavrikj.github.io/wunderground_scraper you would be redirected to https://bojanstavrikj.github.io/content/page1/wunderground_scraper.</p>
             <ol start="3">
-              <li>Redirect old to new URL using .htaccess file</li>
+                <li><b>Redirect old to new URL using .htaccess file</b></li>
             </ol>
             <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to (1) create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
             <p>In my case the old path was /wunderground_scraper, and the new path is /content/page1/wunderground_scraper. Therefore, for this example the redirect would be:</p>
