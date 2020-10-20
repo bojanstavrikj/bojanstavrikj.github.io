@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tutorial article about scraping Wunderground historical data through python. The article showcases a tutorial on web scraping with python using beautifulsoup and selenium libraries in python.">
+    <meta name="keywords" content="Stavric, Stavrik, Stavrikj, Bojan Stavric, Bojan Svarik, web scraping, beautiful soup, beautifulsoup, selenium, chromedriver, python, web scraping python, what is web scraping, ">
+    <meta ta name="author" content="Bojan Stavrikj">
+    <title>Redirect Old To New Page</title>
+    <link rel="image_src"  href="/img/bold.png">
+    <link rel="icon"  href="/img/bold.png">
+    <link rel="stylesheet" href="/css/style.css">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166094935-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166094935-1');
+    </script>
+    <link rel="stylesheet" href="/css/solarized-dark.css">
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+
+    <header>
+      <div id="top-navigation">
+        <h1><a href="/index">Home</a></h1>
+        <h1 class="current"><a href="/content/page1">Content</a></h1>
+      </div>
+    </header>
+
+    <section>
+
+      <div class="container">
+        <div class="article1">
+            <h3>Redirect Old To New Page</h3>
+             <div id="share-buttons">
+                <!-- Email -->
+                <a href="mailto:?&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://bojanstavrikj.github.io/wunderground_scraper">
+                    <img src="/img/mail.png">
+                </a>
+
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://bojanstavrikj.github.io/wunderground_scraper" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://bojanstavrikj.github.io/wunderground_scraper" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                </a>
+
+                <!-- Print -->
+                <a href="javascript:;" onclick="window.print()">
+                    <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+                </a>
+
+                <!-- Reddit -->
+                <a href="http://reddit.com/submit?url=https://bojanstavrikj.github.io/wunderground_scraper&amp;title=Web Scarping Wuderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://bojanstavrikj.github.io/wunderground_scraper&amp;hashtags=datascience,webscraping,wunderground" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+            <p>Redirecting your website can be useful in several scenarios. If for some reason your domain name, you would most likely want to redirect users that try to search for the old URL to the new one.</p>
+            <p>Another scenario that I had to deal with is changing your directory structure. When I first started my website I had all my files in one folder, but after some time I decided to change the location of the files and organize them better. For example, the HTML file for one of the articles I have posted on my website was present in the root directory as shown in the image below:</p>
+            <img class="resize7" src="/content/page1/files/directory1.png">
+            <p>Opening that page would correspond to this URL: https://bojanstavrikj.github.io/wunderground_scraper. At some point my root directory started getting quite messy, so I decided to organize the content part of my page into different folders as shown below.</p>
+            <img class="resize7" src="/content/page1/files/directory2.png">
+            <p>Once this move was implemented, the URL for the same page changed to: https://bojanstavrikj.github.io/content/page1/wunderground_scraper. Therefore, trying to open the old link in a web browser would throw an error.</p>
+            <p>Assuming, the old link has been optimized for search engine optimization (SEO) and is already bringing in traffic to your website you would probably like to redirect any user trying to access the old URL to the new one. There are several ways of doing this.</p>
+            <p>Keep in mind that the original files still need to be online at the original location. So using my case as an example, if you look at the second image above my wunderground_scraper.html page file is present both in the root directory and in the new directory. Therefore, the changes implemented for points 1 and 2 below will be done on the file in the root directory.</p>
+            <ol>
+              <li>Redirect old to new URL using HTML</li>
+                <p>One of the simplest ways of implementing this is by instructing the web browser to redirect users to a new page using a meta tag in the header of your HTML page. For my case, I would open the wunderground_scraper.html file from my root directory (first image) and use the following code:</p>
+                <pre>
+                    <code class="html">
+        <meta http-equiv="refresh" content="0;url='https://bojanstavrikj.github.io/content/page1/wunderground_scraper'">.
+                    </code>
+                </pre>
+                <p>This is a pretty easy way of solving the redirect. Although, as WS3 point out some web browsers get confused so it’s not recommended.</p>
+              <li>Redirect old to new URL using Javascript</li>
+                <p>This is another easy and better way of doing the redirect. Going back to my example, I used the following code in the header of my page:</p>
+                <pre>
+                    <code class="html">
+        <script>
+        // Simulate a mouse click:
+        window.location.href = "https://bojanstavrikj.github.io/content/page1/wunderground_scraper";
+
+        // Simulate an HTTP redirect:
+        window.location.replace("https://bojanstavrikj.github.io/content/page1/wunderground_scraper");
+        </script>
+                    </code>
+                </pre>
+                <p>This would also achieve the same result. And now if you search in your browser for this page: https://bojanstavrikj.github.io/wunderground_scraper you would be redirected to https://bojanstavrikj.github.io/content/page1/wunderground_scraper.</p>
+              <li>Redirect old to new URL using .htaccess file</li>
+                <p>The last option I will show in this article is to use a .htaccess file in order to tell the browser to redirect your site. You first need to (1) create a .htaccess file in your root directory. In this file all you need to write is the following lines:</p>
+                <p>In my case the old path was /wunderground_scraper, and the new path is /content/page1/wunderground_scraper. Therefore, for this example the redirect would be:</p>
+                <pre>
+                    <code class="python">
+        Redirect /wunderground_scraper https://bojanstavrikj.github.io/content/page1/wunderground_scraper
+                    </code>
+                </pre>
+                <p>Note that you need to leave a space between the Redirect, old and new path to the website.</p>
+            </ol>
+
+            <p>What we are doing here is defining a clickable element by finding the button ID. Let's use the Lisboa weather history Wunderground page as an example. If you open <a href="https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date", target="_blank">this page</a> and right-click, inspect the settings button in the top right corner you will see something like the below:</p>
+
+            <p>I hope this has helped you, please contact me below in case you have any questions or improvements.</p>
+
+        </div>
+      </div>
+    </section>
+
+   <div class="contact">
+      <h2>Let's Get In Touch!</h2>
+      <form id="contactform" action="https://formspree.io/moqkaror" method="POST">
+        <div class="input">
+          <p>Name</p><input name="name">
+        </div>
+        <div class="input">
+          <p>Email</p><input type="email" name="_replyto">
+        </div>
+        <div class="input">
+          <p>Message</p>
+          <textarea name="body"></textarea>
+        </div>
+        <div class="input">
+          <input id="button" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="icons">
+        <a class="socialIcons" href="https://www.facebook.com/bojanstavrik" title="facebook"><i class="fab fa-facebook-square" style="color:0072DE"></i></a>
+        <a class="socialIcons" href="https://www.linkedin.com/in/bojan-stavrikj-062995b6/" title=";linkedin"><i class="fab fa-linkedin" style="color:0480F5"></i></a>
+        <a class="socialIcons" href="https://www.youtube.com/user/bojanmkd1/featured?view_as=subscriber" title="youtube"><i class="fab fa-youtube" style="color:EA0012"></i></a>
+      </div>
+     <!-- <div class="contact">
+        <a href="mailto:bojanstavrik@gmail.com">bojanstavrik@gmail.com</a>
+        <a href="tel:+351915654942">+351 915654942</a>
+      </div>-->
+        <div id="bot-navigation">
+        <h1 class="current"><a href="index">Home</a></h1>
+        <h1><a href="/content/page1">Content</a></h1>
+        <h1><a href="/sitemap.xml">Sitemaps</a></h1>
+      </div>
+      <p>Bojan Stavrikj 2020 &copy;</p>
+    </footer>
+
+  <!-- Bootstrap core JS-->
+  <script src="/top_button.js"></script>
+
+  </body>
+</html>
