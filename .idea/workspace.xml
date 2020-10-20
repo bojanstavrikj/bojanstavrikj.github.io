@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="677083d7-cf18-4fce-9e6d-49e377b8d0ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/page1/files/Redirecting your old website to a new one.docx" beforeDir="false" afterPath="$PROJECT_DIR$/content/page1/files/Redirecting your old website to a new one.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/page1/files/~$directing your old website to a new one.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/content/page1/redirect_old_to_new_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/page1/redirect_old_to_new_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
