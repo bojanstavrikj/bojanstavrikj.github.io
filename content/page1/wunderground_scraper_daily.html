@@ -76,13 +76,13 @@
             <pre>
                 <code class="python">
     from bs4 import BeautifulSoup as BS
-	from selenium import webdriver
-	from functools import reduce
-	import pandas as pd
-	import time
-	from selenium.webdriver.common.by import By
-	from selenium.webdriver.support.ui import WebDriverWait
-	from selenium.webdriver.support import expected_conditions as EC
+  	from selenium import webdriver
+  	from functools import reduce
+  	import pandas as pd
+  	import time
+  	from selenium.webdriver.common.by import By
+  	from selenium.webdriver.support.ui import WebDriverWait
+  	from selenium.webdriver.support import expected_conditions as EC
                 </code>
             </pre>
             <p>Then the function for rendering  the page is pretty much the same, although I have now added an extra functionality which allows you to choose the measurement system you want to extract the data in. For Celsius you have to pass "C" and for Fahrenheit "F". Keep in mind that extracting data in Fahrenheit is much faster. This would matter only if you are trying to get a big amount of data. Also don't forget to change the path to the chromedriver. In case you need an explanation about the chromedriver, please read the first Wunderground Scraper <a href="https://bojanstavrikj.github.io/content/page1/wunderground_scraper" target="_blank">article</a>.</p>
@@ -152,10 +152,10 @@
 	    return output
 
 
-	page = "https://www.wunderground.com/history/daily/pt/lisbon/LPPT/date/"
-	dates = ["2020-12-27"]
+  	page = "https://www.wunderground.com/history/daily/pt/lisbon/LPPT/date/"
+  	dates = ["2020-12-27"]
 
-	hourly = hourly_scraper(page,dates,"C")
+  	hourly = hourly_scraper(page,dates,"C")
                 </code>
             </pre>
             <p>To download a full code in .py format click on this <a download href="/content/page1/files/Wunderground_scraper_hourly_upload.py" target="_blank">link</a>.</p>
