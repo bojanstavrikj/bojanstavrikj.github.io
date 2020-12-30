@@ -111,7 +111,7 @@ def scraper(page,dates):
     return output
 
 
-dates = ['2020-5','2020-4','2020-3']
+dates = ['2020-3','2020-4','2020-5']
 page = 'https://www.wunderground.com/history/monthly/pt/lisbon/LPPT/date/'
 
 df_output = scraper(page,dates)
