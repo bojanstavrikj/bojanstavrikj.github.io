@@ -43,20 +43,45 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="projects">
       <div class="container">
-        <h1>About</h1>
-        <div class="par">
-          <p>I am a Macedonian national, currently living in the city of Lisbon pursuing my masters in data science and majoring in business analytics. After living in Macedonia through my elementary phase, I moved to Budapest with my family and lived there until graduating high school and fully picking up Hungarian, and quite fluently.</p>
-        </div>
-        <div class="par">
-          <p>My pursuit to get out of home and living the college life led me to Rotterdam in the Netherlands, where I graduated my bachelors in Economics at Erasmus University Rotterdam. Fours years in, I decided to move back to Budapest for a position as Junior Product Control Analyst at Citibank acquiring knowledge and experience in Finance. Mostly focused on equity derivatives and corporate equity derivatives.</p>
-        </div>
-        <div class="par">
-          <p>Fast forward to 2020, I am currently expanding my knowledge in data science at NOVA IMS in Lisbon, getting hands-on experience in supervised and unsupervised machine learning models, as well forecasting, classification, prediction and segmentation methods on data sourced out through established companies.</p>
-        </div>
-        <div class="par">
-          <p>I am actively seeking opportunities in the felid of Data Science in Lisbon. Feel free to get in touch and we could chat more on how my skills can meet your current requirements in data science or business analysis!</p>
+        <div id="wait">
+          <h1>Projects</h1>
+            <div class="projects">
+			<span class="fa-stack fa-2x" style="color:#f28e02"><i class="fab fa-connectdevelop"></i></span>
+			<h2>Global Network Analysis - Banco de Portugal & Nova IMS</h2>
+			<p>I am currently working on a project that analyzes a global network of investment relationships. Two datasets were used for this project, including: Coordinated Direct Investment Survey (CDIS) and Coordinated Portfolio Investment Survey (CPIS). Network analysis was used to understand the position of differenc countries in intermediating investments in a global network. These findings can be used to identify patterns, preferential paths for investment, establish trends and describe the relations between countries over time. Ultimately, the results are visualized in an interactive web application developed maily with d3js. The visualizations include complex node-link force directed graph, as well as simpler bar, line charts and tabular representations. A link to the final product will be published once it gets fully developed.</p>
+          </div>
+          <div class="projects">
+			<span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-scroll"></i></span>
+			<h2>Web Scraping - Personal</h2>
+			<p>While doing some of the projects outlined in this section, I had the need of obtaining data that would contribute to my models. In one such scenario the team needed some weather data. After several failed attemprs of finding structured files with weather information I realized I should scrape this data for myself. This is when I started learning how to web scrape. After successfuly writing this code for myself, I decided to create a post with the code and explanation so others in similar situations can get this data (avalable in <a href="/content/page1/wunderground_scraper" target="_blank">content</a> section).</p>
+          </div>
+          <div class="projects">
+            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-chart-line"></i></span>
+            <h2>Demand Forecasting - Nova IMS</h2>
+            <p>The company had trouble in determining the right number of drivers to hire for different periods of the year. A predictive model was built using Machine Learning techniques for estimating expected number of services. The challenges faced in this project were data quality and aggregation. Additionaly, the client request for predicting 4 week batches which are 8 weeks in advance made this project more challenging. Although, this was a necessary constraint for the model to be effective due to the long hiring processes. The target set by the client was a maximum mean absolute error of 10%, while we managed to achieve a 5% error on average. The model could further be improved by getting more, and better quality data.</p>
+          </div>
+          <div class="projects">
+            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="far fa-window-close"></i></span>
+            <h2>Booking Cancellation Prediction - Nova IMS</h2>
+            <p>The data used is real and obtained from a hotel based in Lisboa, Portugal. The issue the hotel had was a staggering 40% booking cancellation rate. This is largely contributed to by Online Travel Agencies (OTA's) such as booking.com and airbnb, which often give clients the flexibilty of free cancellations. In order to tackle this problem a predictive model was built which ultimately achieved an 81% accuracy. Having this model deployed, would allow management to better allocate resources and decrease the total number of unvacant rooms at any given time. This could be achieved by allowing for over/under booking flexibility when expected cancellation rates are high/low.</p>
+          </div>
+          <div class="projects">
+            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-layer-group"></i></span>
+            <h2>Customer Segmentation</h2>
+            <p>The data used is real and obtained from a hotel based in Lisboa, Portugal. At the time the hotel had implemented a customer segmentation which was based solely on the booking platform the customer used last. Our team obtained data on a large number of clients of this hotel and managed to perform in-depth analysis on the types of customers that book stays at the hotel in question. The end product resulted in 4 segments for the specific static dataset. Lastly our team gave detailed description of each cluster and suggestions on deployment, maintenance as well as marketing strategies for each profile of customers.</p>
+          </div>
+          <div class="projects">
+            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-database"></i></span>
+            <h2>Classic Models Data Warehouse</h2>
+            <p>The data used is synthetic data with regards to an automotive company and has 110 different models for sale grouped in 7 major product lines: classic cars, vintage cars, motorcycles, trucks, planes, ships and planes. The records of sales orders are available for the period from January 2003 to May 2005. The goal of the project was to develop a data warehouse with star-schema including fact table and several dimensions. This was done in mySQL, and later connected with Pentaho in order to schedule jobs for running the ETL processes. Lastly, a dashboard was created using PowerBI for clear overview for the sales department of Classic Models.</p>
+          </div>
+          <div class="projects">
+            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-cogs"></i></span>
+            <h2>Developing New Control Tool</h2>
+            <p>I developed a new controlling tool for the team. It spread over more than 10 interconnected sheets controlling and reconciling data from 3 different systems on several levels of grain. The challenge was to have all the data in one place while making it run fast without having to go through many formulas to obtain the final result. Data would be inputted over several sheets, from 3 different sources; manual ledger adjustments would be added to the file depending on where the system is breaking and needs to be adjusted. All of this would then be summarized as a simulation of what the final numbers would be after all necessary adjustments are uploaded in the system. This summary was shown on day-to-date, month-to-date and year-to-date basis, including a difference calculation to the initial risk system. After all of this was done, a final system number would be inputed for a final check. Once the trading desk approves and agrees with the final reported numbers, a macro was created in order to distribute the numbers to a list of managers within the company.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -73,7 +98,7 @@
         </div>
         <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-tachometer-alt fa-stack-1x fa-inverse"></i></span>
-          <h3>Business Dashboard</h3>
+          <h3>Business Dashboards</h3>
         </div>
         <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-chart-line fa-stack-1x fa-inverse"></i></span>
@@ -96,8 +121,8 @@
           <h3>Python</h3>
         </div>
         <div class="box">
-          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-layer-group fa-stack-1x fa-inverse"></i></span>
-          <h3>Databricks</h3>
+          <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-js fa-stack-1x fa-inverse"></i></span>
+          <h3>Javascript</h3>
         </div>
         <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-database fa-stack-1x fa-inverse"></i></span>
@@ -105,7 +130,7 @@
         </div>
         <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i></span>
-          <h3>PowerBI</h3>
+          <h3>Power BI</h3>
         </div>
         <div class="box">
           <span class="fa-stack fa-2x"style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-r-project fa-stack-1x fa-inverse"></i></span>
@@ -117,49 +142,16 @@
         </div>
       <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-html5 fa-stack-1x fa-inverse"></i></span>
-          <h3>HTML5</h3>
+          <h3>HTML5/CSS</h3>
         </div>
-        <div class="box">
+        <!-- <div class="box">
           <span class="fa-stack fa-2x"style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fab fa-css3-alt fa-stack-1x fa-inverse"></i></span>
-          <h3>CSS</h3>
-        </div>
+          <h3>Pentaho</h3>
+        </div> -->
         <div class="box">
           <span class="fa-stack fa-2x" style="color:#457b9d"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-server fa-stack-1x fa-inverse"></i></span>
-          <h3>SQL NoSQL Databases</h3>
+          <h3>SQL/NoSQL Databases</h3>
         </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div id="wait">
-          <h1>Projects</h1>
-          <div class="projects">
-            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-cogs"></i></span>
-            <h2>Developing New Control Tool</h2>
-            <p>I developed a new controlling tool for the team in excel. It spread over more than 10 interconnected sheets controlling and reconciling data from 3 different systems on several levels of grain. The challenge was to have all the data in one place while making it run fast without having to go through many formulas to obtain the final result. Data would be inputted over several sheets, from 3 different sources; manual ledger adjustments would be added to the file depending on where the system is breaking and needs to be adjusted. All of this would then be summarized as a simulation of what the final numbers would be after all necessary adjustments are uploaded in the system. This summary was shown on day-to-date, month-to-date and year-to-date basis, including a difference calculation to the initial risk system. After all of this was done, a final system number would be inputed for a final check. Once the trading desk approves and agrees with the final reported numbers, a macro was created in order to distribute the numbers to a list of managers within the company.</p>
-          </div>
-          <div class="projects">
-            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-chart-line"></i></span>
-            <h2>Demand Forecasting</h2>
-            <p>This project was developed in a team of 4. The data used is real and obtained from a transportation company based in Algarve, Portugal whose name cannot be disclosed. The company had trouble in determining the right number of drivers to hire for different periods of the year. That is where my colleagues and I came in. We built a predictive model using Machine Learning techniques for estimating expected number of services. The challenges faced in this project were data quality and aggregation. On top of that the client asked for 4 week batch predictions 8 weeks in advance, due to long hiring processes. The client asked for a maximum mean absolute error of 10% in the model. We managed to achieve a 5% error on average.</p>
-          </div>
-          <div class="projects">
-            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="far fa-window-close"></i></span>
-            <h2>Booking Cancellation Prediction</h2>
-            <p>This project was developed in a team of 4. The data used is real and obtained from a hotel based in Lisboa, Portugal. The issue the hotel had was a staggering 40% booking cancellation rate. This is largely contributed to by Online Travel Agencies (OTA's) such as booking.com and airbnb. Our team explored and cleaned the data before focusing on the main problem. We managed to build a predictive model with 81% accuracy that could be deployed immediately. Lastly, we advised management on deployment, maintenance and several strategies on how to react to certain predictions.</p>
-          </div>
-          <div class="projects">
-            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-layer-group"></i></span>
-            <h2>Customer Segmentation</h2>
-            <p>This project was developed in a team of 4. The data used is real and obtained from a hotel based in Lisboa, Portugal. At the time the hotel had implemented a customer segmentation which was based solely on the booking platform the customer used last. Our team obtained data on a large number of clients of this hotel and managed to perform in-depth analysis on the types of customers that book stays at the hotel in question. The end product resulted in 4 segments for the specific static dataset. Lastly our team gave detailed description of each cluster and suggestions on deployment, maintenance as well as marketing strategies for each profile of customers.</p>
-          </div>
-          <div class="projects">
-            <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-database"></i></span>
-            <h2>Classic Models Data Warehouse</h2>
-            <p>This project was developed in a team of 3. The data used is synthetic data with regards to an automotive company and has 110 different models for sale grouped in 7 major product lines: classic cars, vintage cars, motorcycles, trucks, planes, ships and planes. The records of sales orders are available for the period from January 2003 to May 2005. The goal of the project was to develop a data warehouse with star-schema including fact table and several dimensions. This was done in mySQL, and later connected with Pentaho in order to schedule jobs for running the ETL processes. Lastly, a dashboard was created using PowerBI for clear overview of the sales department of Classic Models.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="professional">
@@ -194,7 +186,8 @@
           <h3>Masters in Data Science and Advanced Analytics</h3>
           <h4>09.2019 - 08.2021.</h4>
           <p>Major in Business Analytics</p>
-          <p>Thesis: TBA</p>
+          <p>Thesis: Global cross-country investment relationships – using network analysis and interactive visualization techniques</p>
+          <p>Average: 17/20</p>
         </div>
 
         <div class="school">
@@ -204,6 +197,7 @@
           <h4>09.2014 - 03.2018</h4>
           <p>Major in International Economics</p>
           <p>Thesis: Empirical analysis on “The Relationship Between Oil Price Fluctuations and Exchange Rates of Net Oil Exporters”</p>
+          <p>Average: 6.5/10</p>
         </div>
 
          <div class="school">
@@ -213,6 +207,26 @@
           <h4>09.2011 - 05.2014</h4>
           <p>Higher Level - Economics, Biology and Theatre</p>
           <p>Standard Level - Math, English and Spanish</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="about">
+      <div class="container">
+        <h1>About</h1>
+        <div class="par">
+          <p>I am a Macedonian national, currently living in the city of Lisbon pursuing my masters in data science and majoring in business analytics. After living in Macedonia through my elementary phase, I moved to Budapest with my family and lived there until graduating high school and fully picking up Hungarian, and quite fluently.</p>
+        </div>
+        <div class="par">
+          <p>My pursuit to get out of home and living the college life led me to Rotterdam in the Netherlands, where I graduated my bachelors in Economics at Erasmus University Rotterdam. Fours years in, I decided to move back to Budapest for a position as Junior Product Control Analyst at Citibank acquiring knowledge and experience in Finance. Mostly focused on equity derivatives and corporate equity derivatives.</p>
+        </div>
+        <div class="par">
+          <p>Fast forward to 2020, I am currently expanding my knowledge in data science at NOVA IMS in Lisbon, getting hands-on experience in supervised and unsupervised machine learning models, as well forecasting, classification, prediction and segmentation methods on data sourced out through established companies.</p>
+        </div>
+        <div class="par">
+          <p>I am actively seeking opportunities in the felid of Data Science in Lisbon. Feel free to get in touch and we could chat more on how my skills can meet your current requirements in data science or business analysis!</p>
         </div>
       </div>
     </section>
@@ -281,7 +295,7 @@
         <h1><a href="/content/page1">Content</a></h1>
         <h1><a href="sitemap.xml">Sitemaps</a></h1>
       </div>
-        <p>Bojan Stavrikj 2020 &copy;</p>
+        <p>Bojan Stavrikj 2021 &copy;</p>
     </footer>
   <!-- Bootstrap core JS-->
   <script src="./top_button.js"></script>

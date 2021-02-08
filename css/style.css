@@ -259,6 +259,15 @@ img.resize3{
     text-justify:inner-word;
 }
 
+.projects p a{
+    color:#457b9d;
+}
+
+.projects p a:hover{
+    color:#1d3557;
+    font-weight:bold;
+}
+
 #wait {
     padding:20px;
     text-align:center;
@@ -541,3 +550,4 @@ footer {
     box-shadow: 0;
     display: inline;
 }
+
