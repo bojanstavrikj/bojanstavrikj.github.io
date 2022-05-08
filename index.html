@@ -14,6 +14,7 @@
     <meta property="og:image" content="">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166094935-1"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -34,30 +35,40 @@
         <h1><a href="/content/page1">Content</a></h1>
       </div>
     </header>
-
-    <section>
+    <div class="container-fluid nopadding" id="intro">
+      <div class="row justify-content-center">
+        <div class="col-6 d-flex align-items-center justify-content-center">
+          <img class="me" src="./img/me.png">
+        </div>
+        <div class="w-100"></div>
+        <div class="col-6 d-flex align-items-center justify-content-center">
+          <p><a style="font-size: 200%;">Bojan Stavrikj</a><br>Data Engineer/Scientist</p>
+        </div>
+      </div>
+    </div>
+    <!-- <section>
       <div id="imgme">
         <img class="me" src="./img/me.png">
       </div>
       <div id="nameme">
         <h1>Bojan Stavrikj</h1>
-        <p>Data Scientist and Business Analyst</p>
+        <p>Data Engineer/Scientist</p>
       </div>
-    </section>
+    </section> -->
 
     <section id="projects">
       <div class="container">
         <div id="wait">
           <h1>Projects</h1>
           <div class="projects">
+        <span class="fa-stack fa-2x" style="color:#f28e02"><i class="fab fa-connectdevelop"></i></span>
+        <h2>Global Network Analysis - Banco de Portugal & Nova IMS</h2>
+        <p>I am currently working on a project that analyzes a global network of investment relationships. Two datasets were used for this project, including: Coordinated Direct Investment Survey (CDIS) and Coordinated Portfolio Investment Survey (CPIS). Network analysis was used to understand the position of different countries in intermediating investments in a global network. These findings can be used to identify patterns, preferential paths for investment, establish trends and describe the relations between countries over time. Ultimately, the results are visualized in an interactive web application developed maily with d3js. The visualizations include complex node-link force directed graph, as well as simpler bar, line charts and tabular representations. The dashboard is available at: <a href="https://fi-networks.com/">https://fi-networks.com/</a>.</p>
+          </div>
+          <div class="projects">
 				<span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-futbol"></i></span>
 				<h2>Fantasy Premier League Web App  - Personal Project</h2>
 				<p>I built a transfer planner and player comparison web application for fantasy premier league managers. The data was obtained through the Premier League and Understat API's. I used python to for data cleaning and aggregation, while for building the app I used mainly HTML, CSS and JavaScript (d3.js). The app allows users to import their team based on ID and show the players that they currently own. The transfer planner section gives the possibility to simulate transfers in a complete one-page view, where all the necessary information is available. Additionally, the users can visually compare the past and expected stats of the players and understand which asset is the most valuable. The web app is available at: <a href="https://fplmania.com">FPL Mania</a>.</p>
-          </div>
-            <div class="projects">
-				<span class="fa-stack fa-2x" style="color:#f28e02"><i class="fab fa-connectdevelop"></i></span>
-				<h2>Global Network Analysis - Banco de Portugal & Nova IMS</h2>
-				<p>I am currently working on a project that analyzes a global network of investment relationships. Two datasets were used for this project, including: Coordinated Direct Investment Survey (CDIS) and Coordinated Portfolio Investment Survey (CPIS). Network analysis was used to understand the position of different countries in intermediating investments in a global network. These findings can be used to identify patterns, preferential paths for investment, establish trends and describe the relations between countries over time. Ultimately, the results are visualized in an interactive web application developed maily with d3js. The visualizations include complex node-link force directed graph, as well as simpler bar, line charts and tabular representations. A link to the final product will be published once it gets fully developed.</p>
           </div>
           <div class="projects">
 			<span class="fa-stack fa-2x" style="color:#f28e02"><i class="fas fa-scroll"></i></span>
@@ -89,6 +100,38 @@
             <h2>Developing New Control Tool</h2>
             <p>I developed a new controlling tool for the team. It spread over more than 10 interconnected sheets controlling and reconciling data from 3 different systems on several levels of grain. The challenge was to have all the data in one place while making it run fast without having to go through many formulas to obtain the final result. Data would be inputted over several sheets, from 3 different sources; manual ledger adjustments would be added to the file depending on where the system is breaking and needs to be adjusted. All of this would then be summarized as a simulation of what the final numbers would be after all necessary adjustments are uploaded in the system. This summary was shown on day-to-date, month-to-date and year-to-date basis, including a difference calculation to the initial risk system. After all of this was done, a final system number would be inputed for a final check. Once the trading desk approves and agrees with the final reported numbers, a macro was created in order to distribute the numbers to a list of managers within the company.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="professional">
+      <div class="container">
+        <h1>Work Experience</h1>
+        <div class="circle">
+          <img class="resize" src="./img/bnp-paribas-logo.png">
+        </div>
+        <div class="working">
+          <h3>BNP Paribas - Data Engineer</h3>
+          <h2>05.2021-Present</h2>
+          <p>I am part of the Stress Testing Financial Synthesis (STFS) team in BNP Paribas, within STFS the sub team of Stress Testing Data Analytics (STDA) where we process data from different data streams in the bank. I work in a big data environment, leveraging on hadoop and Pyspark to process huge amount of data and prepare it for the modelling team in order to stress the portfolio based on different types of shocks. The main project I was part of is a new requirement by the ECB which stresses the portfolio of systematically important European banks. I was involved in the new data collection, data integration and data transformation process. Ultimately building an ETL pipeline in order to deliver databases containing the necessary information as per the ECB requirements in order to stress the bank’s portfolio dependent on different climate change scenarios and projection years.</p>
+        </div>
+
+        <div class="circle">
+          <img class="resize" src="./img/Citibank_logo.png">
+        </div>
+        <div class="working">
+          <h3>Citibank - Junior Product Control Analyist</h3>
+          <h2>03.2018-08.2019</h2>
+          <p>Within Citibank Product Control (PC) is the largest department in Finance with responsibility for controlling daily profit and loss reporting, price verification and new trading activity for the ICG in EMEA. The department is organised into business-aligned teams and the product scope  comprehensive, comprising cash, derivative, as well as structured and exotic variants of the following asset classes; credit, FX, equity, money markets, commodities  and rates. I worked closely across functions on a daily basis (including the Trading desks, Risk Management, Operations, and other areas of Finance) and developed a good understanding of the products traded, along with the associated market risks and accounting complexities.</p>
+        </div>
+
+        <div class="circle">
+          <img class="resize1" src="./img/Telekom.png">
+        </div>
+        <div class="working">
+          <h3>Magyar Telekom - Financial Controlling Intern</h3>
+          <h2>11.2017-12.2017</h2>
+          <p>The internship was taken as part of my bachelor degree, with main goal to study the importance of the financial controlling in keeping Magyar Telekom competitive on the market while being at the forefront. While I was there they were developing new strategic packages that are released on the market as a response to competitors moves.</p>
         </div>
       </div>
     </section>
@@ -161,29 +204,6 @@
         </div>
     </section>
 
-    <section id="professional">
-      <div class="container">
-        <h1>Work Experience</h1>
-        <div class="circle">
-          <img class="resize" src="./img/Citibank_logo.png">
-        </div>
-        <div class="working">
-          <h3>Citibank - Junior Product Control Analyist</h3>
-          <h2>03.2018-08.2019</h2>
-          <p>Within Citibank Product Control (PC) is the largest department in Finance with responsibility for controlling daily profit and loss reporting, price verification and new trading activity for the ICG in EMEA. The department is organised into business-aligned teams and the product scope  comprehensive, comprising cash, derivative, as well as structured and exotic variants of the following asset classes; credit, FX, equity, money markets, commodities  and rates. I worked closely across functions on a daily basis (including the Trading desks, Risk Management, Operations, and other areas of Finance) and developed a good understanding of the products traded, along with the associated market risks and accounting complexities.</p>
-        </div>
-
-        <div class="circle">
-          <img class="resize1" src="./img/Telekom.png">
-        </div>
-        <div class="working">
-          <h3>Magyar Telekom - Financial Controlling Intern</h3>
-          <h2>11.2017-12.2017</h2>
-          <p>The internship was taken as part of my bachelor degree, with main goal to study the importance of the financial controlling in keeping Magyar Telekom competitive on the market while being at the forefront. While I was there they were developing new strategic packages that are released on the market as a response to competitors moves.</p>
-        </div>
-      </div>
-    </section>
-
     <section id="education">
       <h1>Education</h1>
       <div id="educ">
@@ -191,7 +211,7 @@
           <img class="resize1" src="./img/Nova.png">
           <h2>NOVA Information Management School (NOVA IMS)</h2>
           <h3>Masters in Data Science and Advanced Analytics</h3>
-          <h4>09.2019 - 08.2021.</h4>
+          <h4>09.2019 - 03.2021.</h4>
           <p>Major in Business Analytics</p>
           <p>Thesis: Global cross-country investment relationships – using network analysis and interactive visualization techniques</p>
           <p>Average: 17/20</p>
