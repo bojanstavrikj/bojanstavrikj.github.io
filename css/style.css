@@ -107,6 +107,10 @@ hr {
 #about h1{
     text-align:center;
     color:#f28e02;
+}
+#about h1{
+    text-align:center;
+    color:#f28e02;
     overflow:hidden;
     margin-top:10%;
 }
