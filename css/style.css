@@ -123,8 +123,8 @@ hr {
 /*Boxes*/
 
 #skill{
-    float:center;
-    overflow:hidden;
+    /*float:center;
+    overflow:hidden;*/
     margin-top:10%;
 }
 
@@ -133,7 +133,14 @@ hr {
     color:#f28e02;
 }
 
-#skill .box{
+#skill p{
+    text-align:center;
+}
+#lang h3{
+    text-align:center;
+}
+
+/*#skill .box{
     float:left;
     width:33%;
     text-align:center;
@@ -141,7 +148,7 @@ hr {
     color:#1d3557;
     font-size:12px;
     margin-top:10px;
-}
+}*/
 
 /*Work Experience*/
 #professional{
@@ -264,7 +271,7 @@ img.resize3{
 }
 
 .projects p a{
-    color:#457b9d;
+    color:black;
 }
 
 .projects p a:hover{
@@ -555,3 +562,10 @@ footer {
     display: inline;
 }
 
+i {
+    text-align:center;
+}
+
+#skill i {
+    color:#457b9d
+}
